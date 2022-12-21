@@ -1,0 +1,134 @@
+.feedback_main_container{
+    width: 100vw;
+    max-width: 100%;
+}
+
+.feedback_container{
+    margin:0 150px;
+    // border: 1px solid red;
+
+    @media only screen and (max-width: 500px){
+
+     
+       margin: 0;
+   
+       }
+}
+
+.feedback_header{
+    margin: 30px 150px;
+    color: #3284D6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1{
+        font-weight: 200;
+
+    }
+    
+    span{
+        font-weight:bold;
+    }
+    button{
+        cursor: pointer;
+        padding: 10px 40px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        background-color: transparent;
+        color: #3284D6;
+    }
+
+
+    @media only screen and (max-width: 850px){
+
+     
+        margin:20px;
+   
+       }
+}
+
+.reviews{
+    background-image: url("../../images/feedbackbg.png");
+    object-fit:cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 500px;
+
+    @media only screen and (max-width: 450px){
+
+     height: 300px;
+        
+    }
+}
+
+.user_feedback{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    p{
+        width: 35%;
+        margin-top: 30px;
+
+
+        @media only screen and (max-width: 850px){
+     
+        width: 90%;
+        font-size: 1rem;
+        margin-top: -100px;
+
+        }
+        @media only screen and (max-width: 450px){
+     
+        width: 90%;
+        font-size: 0.8rem;
+        margin-top: 10px;
+        }
+    }
+
+    span{
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+}
+
+.arrow_icons{
+    
+
+    .arrows{
+        // padding: 5px 20px;
+        cursor: pointer;
+        margin: 10px;
+
+    }
+}
+
+.feedback_header{
+    h1{
+        @media only screen and (max-width: 850px){
+
+        font-size: 1rem;
+        
+        }
+
+    }
+
+    button{
+        @media only screen and (max-width: 850px){
+
+     
+        padding: 5px;
+        }
+
+    }
+
+}
+

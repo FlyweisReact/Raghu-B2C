@@ -1,0 +1,46 @@
+/** @format */
+
+.lower_nav {
+  width: 100vw;
+  max-width: 100%;
+}
+
+.lower_nav_container {
+  margin: 0 150px;
+  // border: 1px solid red;
+
+  .lower_nav_items {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+
+    ul {
+      color: gray;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      margin-left: 10px;
+
+      &:hover {
+        border-bottom: 1px solid #7abcff;
+        color: #7abcff;
+      }
+
+      @media only screen and (max-width: 850px) {
+        font-size: 0.8rem;
+        margin: 10px 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 850px) {
+    margin: 50px;
+  }
+  @media only screen and (max-width: 450px) {
+    margin: 20px;
+  }
+}

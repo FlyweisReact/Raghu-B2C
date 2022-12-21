@@ -1,0 +1,174 @@
+.why_us_main_containers{
+    width: 100vw;
+    max-width: 100%;
+}
+
+.whyus_container{
+    // border: 1px solid;
+    margin: 60px 150px 0 150px;
+    // padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    @media only screen and (max-width: 550px){
+
+     margin: 0;
+     
+
+    }
+
+
+}
+
+// ---------leftSide-----------
+
+.whyus_left_side{
+    width: 50%;
+    padding: 10px;
+
+    .why_left_side_container{
+        // border: 1px solid green;
+        width: 100%;
+        object-fit:cover;
+        padding: 0;
+
+        img{
+            width: 100%;
+            // height: 100%;
+        }
+    }
+    @media only screen and (max-width: 850px){
+
+     
+     width: 100%;
+
+    }
+
+}
+
+
+//++++++++++++RightSide++++++++++++++
+
+.whyus_right_side{
+    width: 50%;
+    padding: 10px;
+
+    .why_right_side_container{
+        // border: 1px solid blue;
+        width: 100%;
+        padding-left: 20px;
+
+        span{
+            font-size: 3rem;
+            font-weight: 200;
+
+            margin-bottom: 40px;
+        }
+
+
+        p{
+            margin: 40px 0;
+            color: #2fafff;
+            font-size: 0.7rem;
+        }
+    }
+
+    @media only screen and (max-width: 850px){
+        width: 100%;
+   
+     }
+}
+
+.listitems{
+    padding: 0px 50px;
+
+    li{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 15px;
+        color:#1388fd;
+    }
+}
+
+.boxs{
+    margin-right: 20px;
+    color: #1388fd;
+}
+
+
+// ---------circle-design----------------
+
+.circless {
+    z-index: -1;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 0;
+    right: 8%;
+    top: -30px;
+    
+    position: absolute;
+  }
+
+  .circless {
+    position: absolute;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 0;
+    background: radial-gradient(circle at 100px 100px, #ffffffb1, rgba(255, 210, 210, 0.571));
+  }
+.circless2{
+    z-index: -1;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin: 0;
+    right: 10%;
+    bottom: 20%;
+    
+    position: absolute;
+  }
+
+  .circless2 {
+      z-index: -1;
+    position: absolute;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin: 0;
+    background: radial-gradient(circle at 100px 100px, #ffffff, rgba(220, 220, 220, 0.843));
+  }
+.circless3{
+    z-index: -1;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    right: 3%;
+    bottom: 50%;
+    position: absolute;
+  }
+
+  .circless3 {
+    position: absolute;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    background: radial-gradient(circle at 100px 100px, #b8b8b8db, rgba(255, 255, 255, 0.571));
+  }

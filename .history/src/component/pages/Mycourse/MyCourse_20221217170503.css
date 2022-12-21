@@ -1,0 +1,14 @@
+.main-card--container{
+    display : grid ; 
+    grid-template-columns: repeat(3 , minmax(10000px ,500px));
+    grid-gap: 50px;
+    justify-content: space-around;
+  }
+  .card-container{
+    margin : 25px 0 auto ;
+    position  : relative ;
+    display: grid; 
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    align-items:flex-start;
+  }

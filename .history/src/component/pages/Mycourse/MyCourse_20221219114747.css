@@ -1,0 +1,39 @@
+/** @format */
+
+.main-card--container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 300px));
+  text-align: center;
+  grid-gap: 50px;
+  justify-content: space-around;
+  
+}
+.card-container {
+  margin: 25px 0 auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-around;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.card-container .card .card-body {
+    display: flex;
+}
+
+
+.card-container .card .card-body div{
+    border: 1px solid black;
+
+    background-color: #fff;
+    display: none;
+  position: absolute;
+  margin-left: 300px;
+
+  width: 40px;
+}
+
+.newImage:hover + .neww{
+  display: block !important;
+}

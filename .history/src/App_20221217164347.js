@@ -1,0 +1,44 @@
+/** @format */
+
+import { Routes, Link, Route } from "react-router-dom";
+import "./App.css";
+import "./component/common.scss";
+import Courses from "./component/pages/courses/Courses";
+import Home from "./component/Home";
+import Programs from "./component/pages/Programs/Programs";
+import Login from "./component/pages/LoginPage/Login";
+import CreateAccount from "./component/pages/CreateAccount/CreateAccount";
+import Nav from "./component/Navbar/Nav";
+import UsertakenCourses from "./component/pages/UserTakenCourses/UsertakenCourses";
+import ExploreMore from "./component/pages/morecourses/ExploreMore";
+import FilterCourses from "./component/CoursesFilter/FilterCourses";
+import Forgot from "./component/pages/forgotPassword/Forgot";
+import OTP from "./component/pages/otp/OTP";
+import Reset from "./component/pages/reset/Reset";
+import ViewCourses from "./component/pages/viewCourses/ViewCourses";
+import SignUpOtp from "./component/pages/signUpOtp/SignUpOtp"
+function App() {
+  const user = false;
+
+  return (
+    <div className="App">
+      <Routes>
+        <Route exect path="/" element={<Login />} />
+        <Route exect path="/emailVerify" element={<Forgot />} />
+        <Route exect path="/otp" element={<OTP />} />
+        <Route exect path="/reset" element={<Reset />} />
+        <Route exect path="/cources" element={<Courses />} />
+        <Route exect path="/viewCourses" element={<ViewCourses />} />
+        <Route exect path="/program" element={<Programs />} />
+        <Route exect path="/home" element={<Home user={user} />} />
+        <Route exect path="/create-acount" element={<CreateAccount />} />
+        <Route exect path="/signUpOtp" element={<SignUpOtp />} />
+        <Route exect path="/user" element={<UsertakenCourses />} />
+        <Route exect path="/explore" element={<ExploreMore />} />
+        <Route 
+      </Routes>
+    </div>
+  );
+}
+
+export default App;

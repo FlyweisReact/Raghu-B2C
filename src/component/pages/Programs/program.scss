@@ -1,0 +1,193 @@
+.main_programs_container{
+    width: 100vw;
+    max-width: 100%;
+}
+
+.praoragme_banner_contner{
+    width: 100%;
+    height: 450px;
+    background-image: url("../../../images/Learnatyourownpace.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+
+.cards_container{
+    margin: 0 150px;
+    margin-top: -30px;
+    border-radius: 10px;
+    z-index: 2;
+ 
+    margin-bottom: 60px;
+
+    box-shadow: -3px 3px 8px 0px rgba(101,99,99,0.75);
+-webkit-box-shadow: -3px 3px 8px 0px rgba(101,99,99,0.75);
+-moz-box-shadow: -3px 3px 8px 0px rgba(101,99,99,0.75);
+
+
+@media only screen and (max-width: 868px){
+
+    margin: -30px 70px 60px 70px;
+    
+
+}
+@media only screen and (max-width: 500px){
+
+    margin: -30px 20px 20px 20px;
+
+}
+    
+}
+
+.programs_header{
+    height: 50px;
+    background-color: #3284D6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    color: #fff;
+
+    
+@media only screen and (max-width: 868px){
+    h2{
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (max-width: 468px){
+    h2{
+        font-size: 1rem;
+    }
+}
+
+}
+
+.programs_description{
+    padding: 20px 40px;
+
+    h3{
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+
+     
+      
+    }
+}
+
+.program_par_video{
+    display: flex;
+
+    flex-wrap: wrap;
+    margin: 10px 0;
+    width: 100%;
+
+    .pro_par_left{
+        width: 50%;
+   
+        padding: 10px;
+        margin-right: 20px;
+
+        p{
+            font-size: 1.1rem;
+        }
+
+        @media only screen and (max-width: 600px){
+            width: 100%;
+        }
+
+    }
+
+    .pro_video{
+        width: 45%;
+        padding: 10px;
+
+        .ifram{
+            border-radius: 6px;
+        }
+
+        @media only screen and (max-width: 600px){
+            width: 100%;
+        }
+    }
+
+    
+
+
+}
+
+// ------------lower-containers-design-------------
+
+
+.programs_description{
+    h4{
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        color: gray;
+        padding: 10px 0;
+
+        span{
+            margin-left: 30px;
+        }
+    }
+}
+
+// ---button-----------
+
+
+.submitDetails{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+
+    button{
+        padding: 15px 10px;
+        border: 0;
+        border-radius: 5px;
+        width: 229px;
+        color: #fff;
+        cursor: pointer;
+        background-color: #3284D6;
+   
+        font-size: 1.3rem;
+
+    }
+}
+
+.pnavbarss{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    margin: 0 100px;
+}
+
+.programs_description{
+
+    h4{
+
+        span{
+            @media only screen and (max-width: 868px){
+
+                font-size: 0.71rem;
+            }
+
+        }
+
+        }
+}
+
+.pro_par_left{
+
+    h4{
+        
+@media only screen and (max-width: 868px){
+    font-size: 0.83rem;
+}
+    }
+   
+}
