@@ -2,7 +2,6 @@
 
 import React from "react";
 import "./propular.scss";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { BiTimeFive } from "react-icons/bi";
 import { FaUserGraduate } from "react-icons/fa";
 import { FiStar } from "react-icons/fi";
@@ -10,9 +9,11 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import AngularImg from "../../images/angular.png";
 import Microfoft from "../../images/microsoft.png";
-import { Home, LibraryBooks, Person } from "@mui/icons-material";
 import Google from "../../images/gmail.png";
-import { Link, Switch, NavLink } from "react-router-dom";
+
+import img from '../../images/1 (1).jpg'
+import img1 from '../../images/1 (2).jpg'
+import img2 from '../../images/1 (3).jpg'
 
 const PropularCourses = () => {
   return (
@@ -22,15 +23,27 @@ const PropularCourses = () => {
           <h2>Propular Courses For Get Job in Market</h2>
         </div>
 
-        <div className="cards_wrapper">
+        <div className="myCour">
+          <div>
+            <img src={img} alt='' />
+          </div>
+          <div>
+            <img src={img1} alt='' />
+          </div>
+          <div>
+            <img src={img2} alt='' />
+          </div>
+        </div>
+
+        {/* <div className="cards_wrapper">
           <div className="card_holders">
-            <div className="third_Card">
-              <div className="fast_card">
+            <div className="third_Card"> */}
+              {/* <div className="fast_card">
                 <div className="persentage_circle">
                   <div className="main_circle">
                     {/* ---------------parcentage-circle-------------- */}
 
-                    <div class="container">
+                    {/* <div class="container">
                       <div class="row">
                         <div class="col-md-3 col-sm-6">
                           <div class="progress yellow">
@@ -47,14 +60,14 @@ const PropularCourses = () => {
                     </div>
 
                     {/* ----------------------------------------- */}
-                  </div>
+                  {/* </div>
                 </div>
               </div>
-            </div>
+            </div> */} 
             {/* <div className="third_Card"> */}
-            <div className="second_card">
+            {/* <div className="second_card">
               <div className="image_container">
-                <img src={AngularImg} />
+                <img src={AngularImg}  alt=''/>
                 <div className="price">
                   <h4>₹ xxx</h4>
                 </div>
@@ -62,7 +75,7 @@ const PropularCourses = () => {
 
               <div className="totaltime">
                 {/* <AccessTimeIcon/>  */}
-                <BiTimeFive className="biTime" />4 lessions/12weeks
+                {/* <BiTimeFive className="biTime" />4 lessions/12weeks
               </div>
 
               <div className="angularjs">
@@ -72,9 +85,9 @@ const PropularCourses = () => {
                   lorem commodi sed! lorem js angular courses are you fine or
                   sad
                 </p>
-              </div>
+              </div> */} 
 
-              <div className="lowerDiv">
+              {/* <div className="lowerDiv">
                 <div>
                   <FaUserGraduate />
                 </div>
@@ -88,18 +101,18 @@ const PropularCourses = () => {
                   <FiStar className="star" />
                   <FiStar className="star" />
                 </div>
-              </div>
+              </div> */}
 
-              <div className="learn_more">
+              {/* <div className="learn_more">
                 <span>
                   Learn more <AiOutlineArrowRight />{" "}
                 </span>
               </div>
-            </div>
+            </div> */}
 
             {/* </div> */}
 
-            <div className="trd_container">
+            {/* <div className="trd_container">
               <div className="third_Card">
                 <h3>
                   Company Working And Hireing <br /> on this Technology
@@ -137,10 +150,10 @@ const PropularCourses = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
 
-          <div className="prev_next-btn">
+          {/* <div className="prev_next-btn">
             <button>
               <AiOutlineArrowLeft />
               Prev
@@ -150,13 +163,13 @@ const PropularCourses = () => {
               <AiOutlineArrowRight />
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* ----------------    circle---------------- */}
-
+{/* 
         <figure class="circles"></figure>
         <figure class="circles2"></figure>
-        <figure class="circles3"></figure>
+        <figure class="circles3"></figure> */}
       </div>
       {/* --------------sticky--------------- */}
     </>

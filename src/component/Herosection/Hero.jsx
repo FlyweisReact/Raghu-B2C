@@ -22,15 +22,10 @@ const Hero = () => {
 
         <div className="description_section">
           <div className="headings">
-            {/* <h1>Learn From the Experts</h1> */}
             <h1>Welcome to Experts-Works</h1>
           </div>
           <div className="hero_par">
             <p>
-              {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. A
-              maiores saepe aliquid omnis harum facere earum maxime sit aperiam
-              consequuntur sunt inventore veritatis, possimus tenetur dolore
-              voluptates. Quisquam, odio quod. */}
               Welcome to Expert-Works! A top cloud-based e-learning platform
               specially developed for professionals looking for self-paced
               learning models. Are you looking for a career boost in the IT
@@ -95,7 +90,7 @@ const Hero = () => {
 
         <div className="quote">
           <h2>
-            <h2>
+            <h2  style={{color : '#fff'}}>
               " If Your Are Not Educating Yourself, <br /> No One Will Help You
               "{" "}
             </h2>

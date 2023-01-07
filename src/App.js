@@ -18,6 +18,7 @@ import Reset from "./component/pages/reset/Reset";
 import ViewCourses from "./component/pages/viewCourses/ViewCourses";
 import SignUpOtp from "./component/pages/signUpOtp/SignUpOtp"
 import MyCourse from "./component/pages/Mycourse/MyCourse";
+import MyCourseDesc from "./component/pages/Mycourse/MyCourseDesc";
 function App() {
   const user = false;
 
@@ -37,6 +38,8 @@ function App() {
         <Route exect path="/user" element={<UsertakenCourses />} />
         <Route exect path="/explore" element={<ExploreMore />} />
         <Route exect path="/myCourse" element={<MyCourse />} />
+        <Route exect path="/myCourse/:course" element={<MyCourseDesc />} />
+        
       
       </Routes>
     </div>

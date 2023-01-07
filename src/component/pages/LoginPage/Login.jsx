@@ -6,6 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router";
 
 import "./login.scss";
+import img from '../../../images/logo.png'
 
 const Login = () => {
   const navigate = useNavigate();
@@ -29,13 +30,14 @@ const Login = () => {
   }
   return (
     <>
+    <div className="bg-Img"></div>
       <div className="login_main_container">
         <div className="login_container">
           <div className="nav">
             <div className="nav_items_containers">
               <div className="logo">
                 <Link to="/" className="links">
-                  <h1>LOGO</h1>
+                  <img src={img } alt='' style={{width : '200px'}} />
                 </Link>
               </div>
 
@@ -49,25 +51,7 @@ const Login = () => {
               <div action="" className="inputForm">
                 <div className="logo">
                   <h1 style={{ textAlign: "center" }}>WELCOME</h1>
-                  {/* <p style={{ textAlign: "center" }}>
-                    Welcome to Expert-Works! A top cloud-based e-learning
-                    platform specially developed for professionals looking for
-                    self-paced learning models. Sign Up Now!
-                  </p>
-                  <p style={{ textAlign: "center" }}>
-                    You are about to join a vibrant community of learners who
-                    are committed to achieving their goals and reaching their
-                    full potential. Join us today to access our vast library of
-                    courses, interactive assignments, projects, and personalized
-                    learning plans.
-                  </p>
-                  <p style={{ textAlign: "center" }}>
-                    Sign up now to take your education to the next level. You
-                    can get the most out of Expert-works quickly and easily
-                    thanks to our simple interface and helpful customer service
-                    team. So, don't put it off any longer - sign up now and
-                    begin achieving your learning goals!
-                  </p> */}
+               
                 </div>
 
                 <input

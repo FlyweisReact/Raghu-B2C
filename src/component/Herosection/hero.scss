@@ -4,7 +4,11 @@
     height: 130vh;
     position: relative;
 
-    background: url("../../images/hero.png");
+    // background: url("../../images/hero.png");
+    background: url("../../images/4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
     background-attachment: fixed;
     color: #fff;
 

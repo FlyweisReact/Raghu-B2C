@@ -1,9 +1,11 @@
 /** @format */
 
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { GoSearch } from "react-icons/go";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import { RiArrowDownLine } from "react-icons/ri";
+import { useNavigate } from "react-router";
 import Topbar from "../../navigation/Topbar";
 import "./MyCourse.css";
 
@@ -88,6 +90,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/hadoop/intermediate/intermediate.jpg",
@@ -107,6 +110,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/hadoop/expert/expert.jpg",
@@ -150,6 +154,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/automation/intermediate/intermediate.jpg",
@@ -168,6 +173,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/automation/expert/expert.jpg",
@@ -208,6 +214,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/deeplearn/intermediate/intermediate.jpg",
@@ -227,6 +234,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/deeplearn/expert/expert.jpg",
@@ -268,6 +276,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/uipath/intermediate/intermediate.jpg",
@@ -277,7 +286,7 @@ const data = [
       "UiPath software offers solutions for enterprises to automate repetitive office tasks for rapid      business transformation. In today’s digital world, it’s impossible to carry out tasks without      automation. This course is designed by a UI Path expert and brought to you by Expert-Works      with real-time content.",
     detailHead: "Intermediate",
     detail:
-      "This course is for people who have basic knowledge in Ui Path and want to learn more     practically. This course will help you become familiar with industry standard concepts in Ui Path..",
+      "This course is for people who have basic knowledge in Ui Path and want to learn more     practically. This course will help you become familiar with industry standard concepts in Ui Path.",
     IncludeHead: "This course includes the following :",
     include: [
       "15 hours of recorded sessions",
@@ -287,6 +296,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/uipath/expert/expert.jpg",
@@ -328,6 +338,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/javafullstackintermediate/intermediate.jpg",
@@ -368,6 +379,9 @@ const data = [
   },
   // JAVA ---
 
+
+
+
   // Machine Learning --
   {
     image:
@@ -388,6 +402,8 @@ const data = [
       "Questions & Answers",
     ],
   },
+
+  
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/machinelearn/intermediate/intermediate.jpg",
@@ -407,6 +423,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/machinelearn/expert/expert.jpg",
@@ -427,6 +444,7 @@ const data = [
     ],
   },
   // Machine Learning--
+
 
   // JAVA ---
   {
@@ -467,6 +485,8 @@ const data = [
       "Questions & Answers",
     ],
   },
+
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/javaexpert/Expert.jpg",
@@ -488,6 +508,8 @@ const data = [
   },
   // JAVA --
 
+
+
   // SalesForce Developer
   {
     image:
@@ -508,6 +530,8 @@ const data = [
       "Questions & Answers",
     ],
   },
+
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/salesforce/intermediate/intermediate.jpg",
@@ -548,6 +572,7 @@ const data = [
   },
   // Salesforce Developer ---
 
+
   // salesForce Admin --
   {
     image:
@@ -566,6 +591,8 @@ const data = [
       "Questions & Answers",
     ],
   },
+
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/salesforceadmin/intermediate/intermediate.jpg",
@@ -602,6 +629,7 @@ const data = [
   },
   // Salesforce Admin --
 
+
   // Microsofe Azure --
   {
     image:
@@ -621,6 +649,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/azure/intermediate/intermediate.jpg",
@@ -639,6 +668,7 @@ const data = [
       "Questions & Answers",
     ],
   },
+  
   {
     image:
       "https://d3s24np0er9fug.cloudfront.net/phase1/courses/azure/expert/expert.jpg",
@@ -668,8 +698,7 @@ const data = [
     about:
       "AWS is a widely used secure, cloud services platform that offers all these computing services      like storage, computing, content delivery, analytics, computing, database and management. In      other words, AWS lets you run web and application servers on the internet to host dynamic      websites, store all your files in one place securely and use managed databases like MySQL,      Oracle and PostgreSQL to store information. The best part is, you can access your files from      anywhere in the world!",
     detailHead: "Beginner",
-    detail:
-      "AWS Beginner Course",
+    detail: "AWS Beginner Course",
     IncludeHead: "This course includes the following :",
     include: [
       "4 hours of recorded sessions",
@@ -686,8 +715,7 @@ const data = [
     about:
       "AWS is a widely used secure, cloud services platform that offers all these computing services      like storage, computing, content delivery, analytics, computing, database and management. In      other words, AWS lets you run web and application servers on the internet to host dynamic      websites, store all your files in one place securely and use managed databases like MySQL,      Oracle and PostgreSQL to store information. The best part is, you can access your files from      anywhere in the world!      ",
     detailHead: "Intermediate",
-    detail:
-      "AWS Intermediate Course ",
+    detail: "AWS Intermediate Course ",
     IncludeHead: "This course includes the following :",
     include: [
       "8 hours of recorded sessions",
@@ -704,8 +732,7 @@ const data = [
     about:
       "AWS is a widely used secure, cloud services platform that offers all these computing services      like storage, computing, content delivery, analytics, computing, database and management. In      other words, AWS lets you run web and application servers on the internet to host dynamic      websites, store all your files in one place securely and use managed databases like MySQL,      Oracle and PostgreSQL to store information. The best part is, you can access your files from      anywhere in the world!",
     detailHead: "Expert",
-    detail:
-      "AWS Expert Level Course",
+    detail: "AWS Expert Level Course",
     IncludeHead: "This course includes the following :",
     include: [
       "11 hours of recorded sessions",
@@ -725,8 +752,7 @@ const data = [
     about:
       "This is a complete course on Power Bi divided into different parts.You will be first introduced to      the SQL and Data Warehousing concepts, which are divided into two parts. After this, you will      learn about PowerBI Desktop (used to create visualizations) under which you will explore      connecting and shaping data, creating a data model, adding calculated fields with DAX and      finally visualizing data with reports and dashboards.Next, you will learn Artificial Intelligence      visuals, creating Python Visuals in PowerBI, and performance tuning and best practices. The      course will end with PowerBI Service, under which you will be learning how to share and      collaborate the reports in your organization.The Demo files and Presentations needed to follow      the course are available for download.      ",
     detailHead: "Power BI    ",
-    detail:
-      "Power BI ",
+    detail: "Power BI ",
     IncludeHead: "This course includes the following :",
     include: [
       "23 hours of recorded sessions",
@@ -738,10 +764,28 @@ const data = [
       "Real-time content",
     ],
   },
-  // POwerBI ---
 ];
 
 const MyCourse = () => {
+  const navigate = useNavigate();
+  const [data, setData] = useState([]);
+
+  const fetchHandler = async () => {
+    try {
+      const { data } = await axios.get(
+        "http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:5555/api/v1/study/"
+      );
+      console.log(data);
+      setData(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchHandler();
+  }, []);
+
   return (
     <>
       <div className="courses_main_container">
@@ -778,10 +822,14 @@ const MyCourse = () => {
         className="main-card--container"
         style={{ color: "black", marginBottom: "10%" }}
       >
-        {data?.map((i) => {
+        {data?.message?.map((i, index) => {
           return (
             <>
-              <div className="card-container">
+              <div
+                className="card-container"
+                onClick={() => navigate(`/myCourse/${i.head}`)}
+                key={index}
+              >
                 <div className="card">
                   <div className="card-body">
                     <img
@@ -792,13 +840,16 @@ const MyCourse = () => {
                     />
                     <div className="neww">
                       <p style={{ padding: "10px", textAlign: "center" }}>
-                        <strong> {i.aboutHead} </strong> <br /> {i.about}{" "}
+                        <strong>About This Course </strong> <br />{" "}
+                        {i.aboutcourse?.desc}{" "}
                       </p>
                       <p style={{ padding: "10px", textAlign: "center" }}>
-                        <strong> {i.detailHead} </strong> <br /> {i.detail}{" "}
+                        <strong> {i.level?.heading} </strong> <br />{" "}
+                        {i.level?.desc}{" "}
                       </p>
                       <p style={{ padding: "10px", textAlign: "center" }}>
-                        <strong> {i.IncludeHead} </strong> <br />{" "}
+                        <strong> This course includes the following : </strong>{" "}
+                        <br />{" "}
                         {i.include?.map((j, index) => (
                           <ul>
                             <li
@@ -811,7 +862,7 @@ const MyCourse = () => {
                       </p>
                     </div>
                   </div>
-                  <h3> {i.head} </h3>
+                  <h3> {i.aboutcourse?.heading} </h3>
                 </div>
               </div>
             </>

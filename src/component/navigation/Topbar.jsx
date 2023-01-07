@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Dropdown from "./Dropdown";
 import { navItems } from "./NavItems";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import img from '../../images/logo.png'
 
 const Container = styled.div`
   background: transparent;
@@ -173,7 +174,9 @@ const Topbar = () => {
     <>
       <Container>
         <Nav>
-          <NavLogo to="/">LOGO</NavLogo>
+          <NavLogo to="/">
+            <img src={img} alt='' style={{width : '200px'}} />
+          </NavLogo>
           <MobileIcon onClick={handle}>
             {click ? <AiOutlineClose /> : <AiOutlineMenu />}
           </MobileIcon>

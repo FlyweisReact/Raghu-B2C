@@ -483,3 +483,33 @@ border-radius: 10px;
     margin: 0;
     background: radial-gradient(circle at 100px 100px, #ffc7c7cb, rgba(248, 248, 248, 0.571));
   }
+
+  .myCour {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  @media (max-width : 768px) {
+    .myCour{
+        display: block;
+        margin: auto;
+    }
+    .myCour div img{
+        display: block;
+        margin: auto;
+        margin-top: 1% !important;
+    }
+  }
+  @media (max-width : 1024px) {
+    .myCour{
+        display: block;
+        margin: auto;
+    }
+    .myCour div img{
+        display: block;
+        margin: auto;
+        margin-top: 1% !important;
+    }
+  }
+

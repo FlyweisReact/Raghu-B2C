@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router";
-
+import img from '../../../images/logo.png'
 import "./create.scss";
 
 const CreateAccount = () => {
@@ -29,13 +29,14 @@ const CreateAccount = () => {
   }
   return (
     <>
+      <div className="bg-Img"></div>
       <div className="login_main_container">
         <div className="clogin_container">
           <div className="nav">
             <div className="nav_items_containerss">
               <div className="logo">
-                <Link to="/" className="links">
-                  <h1>LOGO</h1>
+              <Link to="/" className="links">
+                  <img src={img } alt='' style={{width : '200px'}} />
                 </Link>
               </div>
 

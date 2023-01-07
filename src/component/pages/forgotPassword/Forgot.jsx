@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import img from '../../../images/logo.png'
 
 const Forgot = () => {
   const navigate = useNavigate();
@@ -26,13 +27,14 @@ const Forgot = () => {
   }
   return (
     <>
+      <div className="bg-Img"></div>
       <div className="login_main_container">
         <div className="login_container">
           <div className="nav">
             <div className="nav_items_containers">
               <div className="logo">
-                <Link to="/" className="links">
-                  <h1>LOGO</h1>
+              <Link to="/" className="links">
+                  <img src={img } alt='' style={{width : '200px'}} />
                 </Link>
               </div>
 
