@@ -2,11 +2,14 @@
 
 import React from "react";
 import Topbar from "../../navigation/Topbar";
+
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+import img from "../../../images/introduction.jpg";
 
 const MyCourseDesc = () => {
   return (
@@ -22,7 +25,78 @@ const MyCourseDesc = () => {
         </div>
       </div>
 
-     
+      {/* <div className="newDiv">
+        <div className="CourseV">
+          <video controls>
+            <source
+              src="https://d3s24np0er9fug.cloudfront.net/phase1/public/LMS%20New.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support HTML video.
+          </video>
+        </div>
+        <div className="second">
+          <h1>Python: Beginner</h1>
+          <p>
+            Python is a powerful and general-purpose programming language. This
+            course is designed by an experienced Python expert to provide you
+            the best real-time content. This course will help you understand
+            everything needed to excel in this programming language. All the
+            best!
+          </p>
+          <p>
+            Python is a powerful and general-purpose programming language. This
+            course is designed by an experienced Python expert to provide you
+            the best real-time content. This course will help you understand
+            everything needed to excel in this programming language. All the
+            best!
+          </p>
+          <p>
+            Python is a powerful and general-purpose programming language. This
+            course is designed by an experienced Python expert to provide you
+            the best real-time content. This course will help you understand
+            everything needed to excel in this programming language. All the
+            best!
+          </p>
+          <p>
+            As a beginner, it’s important to learn everything from the basics.
+            This course will provide you the basic knowledge to get started with
+            Python.
+          </p>
+          <p>
+            Python is a powerful and general-purpose programming language. This
+            course is designed by an experienced Python expert to provide you
+            the best real-time content. This course will help you understand
+            everything needed to excel in this programming language. All the
+            best!
+          </p>
+          <p>
+            As a beginner, it’s important to learn everything from the basics.
+            This course will provide you the basic knowledge to get started with
+            Python.
+          </p>
+          <p>
+            Python is a powerful and general-purpose programming language. This
+            course is designed by an experienced Python expert to provide you
+            the best real-time content. This course will help you understand
+            everything needed to excel in this programming language. All the
+            best!
+          </p>
+          <p>
+            As a beginner, it’s important to learn everything from the basics.
+            This course will provide you the basic knowledge to get started with
+            Python.
+          </p> */}
+      {/* <h5>This course includes the following :</h5> */}
+      {/* <ul>
+            <li>5 hours of recorded sessions</li>
+            <li>3 assignments</li>
+            <li>1 mini-project</li>
+            <li>Real-time contents</li>
+            <li>Questions & Answers</li>
+          </ul> */}
+      {/* </div> */}
+      {/* </div> */}
 
       <div className="NewTeoSec">
         <div className="left">

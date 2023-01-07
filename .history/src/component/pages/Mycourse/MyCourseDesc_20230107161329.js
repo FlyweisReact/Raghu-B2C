@@ -2,11 +2,14 @@
 
 import React from "react";
 import Topbar from "../../navigation/Topbar";
+
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+import img from "../../../images/introduction.jpg";
 
 const MyCourseDesc = () => {
   return (
