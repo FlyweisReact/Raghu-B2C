@@ -1,0 +1,58 @@
+/** @format */
+
+.Trialheader {
+  width: 100%;
+  /* height: 10vh; */
+}
+.Trialheader img {
+  width: 100%;
+  /* height: 10vh; */
+}
+.TrialForm {
+  margin-top: 40px;
+}
+.TrialForm div {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+.TrialForm div input {
+  width: 400px;
+  padding: 10px;
+  outline: none;
+  border-radius: 50px;
+  font-size: 20px;
+  padding-left: 40px;
+  background-color: #d9d9d9;
+  border: 1px solid #d9d9d9;
+}
+.TrialForm button {
+    text-align: center;
+    background-color: #2196F3;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #2196F3;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-top: 30px !important;
+    border-radius: 50px;
+}
+
+.TrialForm .special{
+    justify-content: flex-start;
+    margin-left: 19.3%;
+}
+
+
+@media (max-width : 768px) {
+.TrialForm div{
+    display: block;
+}
+.TrialForm .special{
+    margin-left: o;
+}
+    
+}
