@@ -222,13 +222,7 @@
 }
 
 .centerBtn{
-  width: 100%;
-  padding: 8px;
-  background-color: #9779f0;
-  color: #fff;
-  border: 1px solid #9779f0;
-  margin-top: 10px;
-  font-size: 18px;
+  width: ;
 }
 
 @media (max-width : 768px) {

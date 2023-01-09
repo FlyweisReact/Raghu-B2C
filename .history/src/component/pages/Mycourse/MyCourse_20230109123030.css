@@ -227,6 +227,8 @@
   background-color: #9779f0;
   color: #fff;
   border: 1px solid #9779f0;
+  display: block;
+  margin: auto;
   margin-top: 10px;
   font-size: 18px;
 }

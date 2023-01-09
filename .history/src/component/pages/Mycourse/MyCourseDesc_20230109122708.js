@@ -22,6 +22,8 @@ const MyCourseDesc = () => {
         </div>
       </div>
 
+     
+
       <div className="NewTeoSec">
         <div className="left">
           <p className="CourseHead">Python Beginner</p>
@@ -92,7 +94,7 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
+                  <
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -125,7 +127,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -158,7 +159,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -191,7 +191,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -224,7 +223,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -257,7 +255,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -290,7 +287,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -323,7 +319,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -356,7 +351,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -369,7 +363,7 @@ const MyCourseDesc = () => {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography className="bold-p blurT">
+                <Typography className="bold-p blurT" >
                   Section 10 : Python Input Output
                 </Typography>
               </AccordionSummary>
@@ -389,7 +383,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -422,7 +415,6 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -439,7 +431,7 @@ const MyCourseDesc = () => {
                   Section 12 : Conclusion
                 </Typography>
               </AccordionSummary>
-              <AccordionDetails>
+              <AccordionDetails> 
                 <Typography className="bold-p blurT">
                   <div className="Dess">
                     <input type={"checkbox"} />
@@ -455,7 +447,37 @@ const MyCourseDesc = () => {
                       Course <br /> Model <br /> Video
                     </p>
                   </div>
-                  <button className="centerBtn">Document</button>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+          <div className="accord">
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography className="bold-p blurT">
+                  Section 13 : Documentation
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails> 
+                <Typography className="bold-p blurT">
+                  <div className="Dess">
+                    <input type={"checkbox"} />
+
+                    <img
+                      src={
+                        "https://d3s24np0er9fug.cloudfront.net/phase1/courses/python/beginner/beginner.jpg"
+                      }
+                      alt=""
+                      className="img-thumbnail"
+                    />
+                    <p>
+                      Course <br /> Model <br /> Video
+                    </p>
+                  </div>
                 </Typography>
               </AccordionDetails>
             </Accordion>

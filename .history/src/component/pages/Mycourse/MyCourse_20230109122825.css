@@ -221,15 +221,7 @@
   text-shadow: 0 0 3px #000;
 }
 
-.centerBtn{
-  width: 100%;
-  padding: 8px;
-  background-color: #9779f0;
-  color: #fff;
-  border: 1px solid #9779f0;
-  margin-top: 10px;
-  font-size: 18px;
-}
+.centerBtn
 
 @media (max-width : 768px) {
   .NewTeoSec{
