@@ -19,8 +19,6 @@ import MyCourse from "./component/pages/Mycourse/MyCourse";
 import MyCourseDesc from "./component/pages/Mycourse/MyCourseDesc";
 import FreeTrial from "./component/pages/FreeTrial/FreeTrial";
 import Subscription from "./component/pages/FreeTrial/Subscription";
-import Billing from "./component/pages/FreeTrial/Billing";
-import ThankYOu from "./component/pages/FreeTrial/ThankYOu";
 function App() {
   const user = false;
 
@@ -43,10 +41,7 @@ function App() {
         <Route exect path="/myCourse/:course" element={<MyCourseDesc />} />
         <Route  exect path="/trial" element={<FreeTrial />} />
         <Route  exect path="/subscription" element={<Subscription />} />
-        <Route  exect path="/billing" element={<Billing />} />
-        <Route  exect path="/thank" element={<ThankYOu />} />
-
-
+        
 
         
       

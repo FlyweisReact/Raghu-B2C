@@ -45,7 +45,7 @@ const Subscription = () => {
         <div className="subsDIV"></div>
         <div className="Images">
           <img src={img} alt="" onClick={() => navigate('/billing')} />
-          <img src={img2} alt="" onClick={() => navigate('/billing')} />
+          <img src={img2} alt="" />
         </div>
       </div>
     </>

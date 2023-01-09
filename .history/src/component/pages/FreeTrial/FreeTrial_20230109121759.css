@@ -172,7 +172,6 @@
   display: flex;
   justify-content: center;
   margin-top: 2%;
-  gap : 20px
 }
 
 .twoBtns .btn2 {
@@ -188,6 +187,7 @@
   font-size: 25px;
   border-radius: 5px;
   color: white;
+  margin-left: 2%;
 }
 
 

@@ -57,8 +57,8 @@
 }
 
 .subsImages .Images {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .subsImages img {
   cursor: pointer;
@@ -78,19 +78,10 @@
     display: block;
     margin: auto;
   }
-  
-.subsImages .Images {
-  display: block;
-  margin: auto;
 }
-.subsImages .Images img {
-  display: block;
-  margin: auto;
-}
-.subsDIV{
-  min-height: 140vh !important;
-}
-}
+
+
+
 
 .BillingDiv {
   display: flex;
@@ -101,11 +92,11 @@
   border: 1px solid #e1e1e1;
   background-color: #fff;
   width: 300px;
-  padding: 10px;
-  outline: none;
+  padding: 5px;
 }
-.inputDIvv{
-  margin-top: 20px;
+
+.BillingDiv label {
+  margin-top: 5%;
 }
 
 .BillingDiv .left {
@@ -131,8 +122,6 @@
   width: 100%;
   margin-top: 1%;
   padding: 5px;
-  font-size: 25px;
-  border: 1px solid #04a96d;
   color: #fff;
 }
 
@@ -141,7 +130,6 @@
   background-color: #f2f2f2;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: 250px;
-  text-align: center;
 }
 
 .BillingDiv .right h5 {
@@ -161,51 +149,4 @@
 .BillingDiv .right h6 {
   font-size: 1.6rem;
   margin-top: 5%;
-}
-
-.ok-Image{
-  display: block;
-  margin: auto;
-}
-
-.twoBtns{
-  display: flex;
-  justify-content: center;
-  margin-top: 2%;
-  gap : 20px
-}
-
-.twoBtns .btn2 {
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 25px;
-  border-radius: 5px;
-}
-.twoBtns .btn3 {
-  background-color: #358bf0;
-  border: 1px solid #358bf0;
-  padding: 10px;
-  font-size: 25px;
-  border-radius: 5px;
-  color: white;
-}
-
-
-@media (max-width : 768px) {
-  .BillingDiv{
-    display: block;
-  }
-  .BillingDiv .left {
-    width: 90%;
-    margin-left: 5%;
-  }
-  .BillingDiv .left .divSub {
-    display: block;
-  }
-  .BillingDiv .right {
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5%;
-  }
-  
 }

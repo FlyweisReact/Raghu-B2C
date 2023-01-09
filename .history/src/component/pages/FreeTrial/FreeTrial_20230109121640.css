@@ -168,26 +168,20 @@
   margin: auto;
 }
 
-.twoBtns{
-  display: flex;
-  justify-content: center;
-  margin-top: 2%;
-  gap : 20px
-}
 
 .twoBtns .btn2 {
   border: 1px solid black;
-  padding: 10px;
-  font-size: 25px;
+  padding: 5px;
   border-radius: 5px;
 }
 .twoBtns .btn3 {
   background-color: #358bf0;
   border: 1px solid #358bf0;
-  padding: 10px;
-  font-size: 25px;
+  padding: 5px;
+
   border-radius: 5px;
   color: white;
+  margin-left: 2%;
 }
 
 

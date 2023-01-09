@@ -172,7 +172,6 @@
   display: flex;
   justify-content: center;
   margin-top: 2%;
-  gap : 20px
 }
 
 .twoBtns .btn2 {
@@ -184,10 +183,11 @@
 .twoBtns .btn3 {
   background-color: #358bf0;
   border: 1px solid #358bf0;
-  padding: 10px;
-  font-size: 25px;
+  padding: 5px;
+
   border-radius: 5px;
   color: white;
+  margin-left: 2%;
 }
 
 
