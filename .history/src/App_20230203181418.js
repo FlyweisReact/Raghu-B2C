@@ -47,7 +47,7 @@ function App() {
         <Route  exect path="/subscription" element={<Subscription />} />
         <Route  exect path="/billing" element={<Billing />} />
         <Route  exect path="/thank" element={<ThankYOu />} />
-        <Route  exect path="/" element={<HomePage />} />
+        <Route  exect path="/homePage" element={<HomePage />} />
         
 
 
