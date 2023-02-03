@@ -1,0 +1,252 @@
+/** @format */
+
+.HomeNewnav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.HomeNewnav .left img {
+  width: 200px;
+}
+.HomeNewnav .right ul {
+  display: flex;
+  gap: 2rem;
+}
+.HomeNewnav .right ul li {
+  list-style: none;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.HomeNewnav .right ul button {
+  width: 120px;
+  font-size: 16px;
+  margin-top: 0;
+  border: 1px solid #6e90f0;
+  color: #6e90f0;
+  background-color: #fff;
+
+  padding: 10px;
+  border-radius: 50px;
+}
+.HomeNewnav .right ul li:hover {
+  color: #6e90f0;
+  cursor: pointer;
+}
+
+.mainSecTwo {
+  display: flex;
+  margin-top: 2%;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.mainSecTwo .left {
+  width: 50%;
+  margin-left: 7%;
+  margin-top: 3%;
+}
+.mainSecTwo .right {
+  width: 50%;
+}
+.mainSecTwo .right img {
+  width: 100%;
+}
+.mainSecTwo .left .head {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-left: 10%;
+}
+.mainSecTwo .left .desc {
+  width: 500px;
+  word-spacing: 10px;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-left: 10%;
+  color: #b0b3b8;
+}
+.mainSecTwo .left .btns {
+  display: flex;
+  gap: 10px;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+.mainSecTwo2 {
+  display: flex;
+  margin-top: 5%;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.mainSecTwo2 .right {
+  width: 50%;
+  margin-top: 4%;
+  margin-left: 7%;
+}
+.mainSecTwo2 .left {
+  width: 50%;
+}
+.mainSecTwo2 .left img {
+  width: 100%;
+}
+.mainSecTwo2 .right .head {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-left: 10%;
+}
+.mainSecTwo2 .right .desc {
+  width: 500px;
+  word-spacing: 10px;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-left: 10%;
+  color: #b0b3b8;
+}
+.mainSecTwo2 .right .btns {
+  display: flex;
+  gap: 10px;
+  margin-left: 10%;
+  margin-top: 40px;
+}
+
+.centerMainDiv {
+  width: 80%;
+  background-image: linear-gradient(to right, #5a57cc, #cd5bba, #fdc973);
+  margin: auto;
+  border-radius: 50px;
+  padding: 10px;
+  display:  flex;
+  margin-bottom: 5%;
+  justify-content: space-between;
+  padding-bottom: 5%;
+  padding-top: 2%;
+}
+.centerMainDiv .left {
+    margin-top:7%;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 20%;
+    width: 40%;
+}
+.centerMainDiv .right{
+    width: 60%;
+}
+.centerMainDiv .right .group{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-top: 5%;
+}
+.centerMainDiv .right .group div{
+    width: 300px;
+}
+.centerMainDiv .right .group div .head{
+    color: #fff;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.centerMainDiv .right .group div .desc{
+    color: #fff;
+    font-size: 13px;
+    max-width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+.newTwoSec {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-bottom: 5%;
+}
+.newTwoSec .left {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.newTwoSec .left div {
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #959595;
+}
+.newTwoSec .left .head{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 40px;
+}
+.newTwoSec .right p{
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 3rem;
+}
+
+.centerText {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.newThreeSec {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+
+.newThreeSec .main{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    width: 32%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.newThreeSec .main .left{
+    width: 100px;
+    border-radius: 100%;
+    height: 100px;
+    background-color: #959595;
+}
+.newThreeSec .main .right .desc{
+    font-size: 13px;
+    width: 350px;
+}
+.newThreeSec .main .right{
+    position: relative;
+}
+.newThreeSec .main .right .head{
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute ;
+    bottom : 10px ;
+}
+.twoSecNew{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+}
+.twoSecNew .left{
+    width: 40%;
+}
+.twoSecNew .left .head{
+    font-weight: bold;
+    font-size: 22px;
+}
+.twoSecNew .left .desc{
+    margin-top: 10px;
+    color: ;
+}

@@ -1,0 +1,64 @@
+.HomeNewnav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left:10%;
+    margin-top: 2%;
+}
+.HomeNewnav .left img{
+    width: 200px;
+}
+.HomeNewnav .right ul {
+    display: flex;
+    gap: 5rem;
+}
+.HomeNewnav .right ul li{
+    list-style: none;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.HomeNewnav .right ul  button {
+    width: 120px;
+    font-size: 16px;
+    margin-top: 0;
+    border: 1px solid #6e90f0;
+    color: #6e90f0;
+    background-color: #fff;
+
+    padding: 10px;
+    border-radius: 50px;
+}
+.HomeNewnav .right ul li:hover{
+    color: #6e90f0;
+    cursor: pointer;
+}
+
+.mainSecTwo {
+    display: flex;
+    margin-top: 2%;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.mainSecTwo .left{
+    width: 50%;
+    margin-left: 7%;
+}
+.mainSecTwo .right{
+    width: 40%;
+}
+.mainSecTwo .left .head{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 10%;
+
+}
+.mainSecTwo .left .desc{
+    width: 500px;
+    word-spacing: 10px;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+.mainSecTwo .left .btns{
+    display: flex;
+}

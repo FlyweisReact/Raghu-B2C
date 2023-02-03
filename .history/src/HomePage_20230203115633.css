@@ -1,0 +1,6 @@
+.HomeNewnav{
+    display: flex;
+}
+.HomeNewnav .left img{
+    width: 200px;
+}

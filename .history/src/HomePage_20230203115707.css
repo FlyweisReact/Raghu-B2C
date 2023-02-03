@@ -1,0 +1,11 @@
+.HomeNewnav{
+    display: flex;
+    justify-content: space-between;
+}
+.HomeNewnav .left img{
+    width: 200px;
+}
+.HomeNewnav .right ul {
+    display: flex;
+    gap: 2rem;
+}

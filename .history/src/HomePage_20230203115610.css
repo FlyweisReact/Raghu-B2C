@@ -1,0 +1,6 @@
+.nav{
+    display: flex;
+}
+.nav .left img{
+    width: 100px;
+}

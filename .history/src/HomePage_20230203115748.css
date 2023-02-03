@@ -1,0 +1,16 @@
+.HomeNewnav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5%;
+}
+.HomeNewnav .left img{
+    width: 200px;
+}
+.HomeNewnav .right ul {
+    display: flex;
+    gap: 2rem;
+}
+.HomeNewnav .right ul li{
+    list-style: none;
+}
