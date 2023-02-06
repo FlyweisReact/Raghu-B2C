@@ -6,6 +6,7 @@ import "./FreeTrial.css";
 import img from "../../../images/Main copy 2.png";
 import img2 from "../../../images/Main copy 1.png";
 import { useNavigate } from "react-router";
+import Header from "../../Header/Header";
 
 const Subscription = () => {
 
@@ -13,7 +14,7 @@ const Subscription = () => {
 
   return (
     <>
-      <div
+      {/* <div
         className="courses_main_container"
         style={{ backgroundColor: "black" }}
       >
@@ -22,8 +23,9 @@ const Subscription = () => {
             <Topbar />
           </div>
         </div>
-      </div>
+      </div> */}
 
+<Header/>
       <h1
         style={{
           fontWeight: "bold",

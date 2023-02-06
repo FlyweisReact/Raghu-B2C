@@ -1,0 +1,146 @@
+/** @format */
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+.HomeNewnav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 8%;
+  margin-top: 1%;
+}
+.HomeNewnav .left img {
+  width: 200px;
+  margin-bottom: 1%;
+}
+.HomeNewnav .right ul {
+  display: flex;
+  gap: 2rem;
+}
+.HomeNewnav .right ul .normalList{
+  margin-top: 10px;
+}
+.HomeNewnav .right ul li {
+  list-style: none;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.HomeNewnav .right ul li  .personImg{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.HomeNewnav .right ul li  .CartImg{
+  width:40px;
+}
+.HomeNewnav .right ul li  input { 
+  padding: 10px;
+  border: 1px solid #000;
+  font-size: 16px;
+  outline: none;
+  width: 300px;
+  border-radius: 50px;
+  background-color: #d9d9d9;
+}
+.HomeNewnav .right ul button {
+  width: 120px;
+  font-size: 16px;
+  margin-top: 0;
+  border: 1px solid #6e90f0;
+  color: #6e90f0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.HomeNewnav .right ul li:hover {
+  color: #6e90f0;
+}
+.HomeNewnav .right ul li:focus {
+  color: #6e90f0;
+}
+
+.sideBarMenu {
+  display: none;
+}
+
+.sideMenuRes {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  scroll-behavior: smooth;
+  margin-left: -350px;
+  position: absolute;
+  z-index: 9999;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.5s;
+}
+.sideMenuRes ul {
+  margin-left: 50px;
+}
+.sideMenuRes ul li {
+  list-style: none;
+  font-size: 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.sideMenuRes ul button {
+  width: 120px;
+  font-size: 16px;
+  margin-top: 20px;
+  border: 1px solid #6e90f0;
+  color: #6e90f0;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.sideMenuRes ul li:hover {
+  color: #6e90f0;
+}
+.sideMenuRes ul li:focus {
+  color: #6e90f0;
+}
+.fa-magnifying-glass {
+  cursor: pointer;
+}
+
+
+.Userinfo{
+  width: 460px;
+    height: 180px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    z-index: 9999;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+}
+.Userinfo button{
+  width: 80%;
+  margin: auto;
+  display: block;
+  margin-top: 2px;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .HomeNewnav .right ul {
+    display: none;
+  }
+  .sideBarMenu {
+    font-size: 2rem;
+    display: block;
+    margin-top: 10px;
+  }
+}

@@ -7,8 +7,9 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import axios from "axios";
+import Header from "../../Header/Header";
 
 const MyCourseDesc = () => {
   const { id } = useParams();
@@ -18,42 +19,52 @@ const MyCourseDesc = () => {
   const fetchHandler = useCallback(async () => {
     try {
       const { data } = await axios.get(
-        `http://ec2-15-206-210-177.ap-south-1.compute.amazonaws.com:5555/api/v1/course/main/${id}`
+        `https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/level/${id}`
       );
       setData(data);
-      console.log(data)
-      setVideo(data.message[0].maninvideo)
+      console.log(data);
+      setVideo(data.message[0].maninvideo);
     } catch (err) {
       console.log(err);
     }
-  }, [id ]);
+  }, [id]);
 
   useEffect(() => {
     fetchHandler();
   }, [fetchHandler]);
 
-  console.log('viedi vinfoe  vidno ')
-  console.log(video)
+  console.log("viedi vinfoe  vidno ");
+  console.log(video);
+
+  const CourseName =  data?.message?.[0]?.mainInfo?.aboutcourse?.heading
 
   function ModalVideo(data) {
-    setVideo(
-      data.video
-    );
-    fetchHandler()
+    setVideo(data.video);
+    fetchHandler();
   }
+  const navigate = useNavigate();
+
+  const addToCart = async () => {
+    try {
+      const data = await axios.post(
+        "https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/cart",
+        {
+          courseId: id,
+          qua: 1,
+          pri: 500,
+          name : CourseName
+        }
+      );
+      navigate("/cart")
+      alert('Added to Cart')
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
-      <div
-        className="courses_main_container"
-        style={{ backgroundColor: "black" }}
-      >
-        <div className="course_header_content">
-          <div className="navbarss">
-            <Topbar />
-          </div>
-        </div>
-      </div>
+      <Header />
 
       <div className="NewTeoSec">
         <div className="left">
@@ -84,13 +95,32 @@ const MyCourseDesc = () => {
             <p className="include-head">This course includes the following:</p>
             <ul>
               {data?.message?.[0]?.mainInfo?.include?.map((i) => (
-                <li >{i}</li>
+                <li>{i}</li>
               ))}
             </ul>
           </div>
         </div>
         <div className="right">
-          <div className="CourseHead">Course Content</div>
+          <div className="CourseHead">
+            Course Content{" "}
+            <span>
+              <button
+                style={{
+                  backgroundColor: "#ff9900",
+                  color: "#fff",
+                  width: "200px",
+                  border: "1px solid #ff9900",
+                  padding: "10px",
+                  fontSize: "20px",
+                  marginLeft: "50px",
+                }}
+                // onClick={() => navigate("/cart")}
+                onClick={() => addToCart()}
+              >
+                Add to Cart
+              </button>
+            </span>{" "}
+          </div>
 
           {data?.message?.[0]?.content?.map((i, index) => (
             <div className="accord">
@@ -104,7 +134,7 @@ const MyCourseDesc = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className="bold-p">
-                    <div className="Dess"   onClick={() => ModalVideo(i)}>
+                    <div className="Dess" onClick={() => setVideo(i.video)}>
                       <input type={"checkbox"} />
                       <img
                         src={

@@ -6,12 +6,13 @@ import img from "../../../images/Group 833.png";
 import "./FreeTrial.css";
 import img2 from "../../../images/Group 834.png";
 import { useNavigate } from "react-router";
+import Header from "../../Header/Header";
 
 const FreeTrial = () => {
     const navigate = useNavigate()
   return (
     <>
-      <div
+      {/* <div
         className="courses_main_container"
         style={{ backgroundColor: "black" }}
       >
@@ -20,7 +21,8 @@ const FreeTrial = () => {
             <Topbar />
           </div>
         </div>
-      </div>
+      </div> */}
+      <Header />
 
       <div className="Trialheader">
         <img src={img} alt="" />

@@ -5,12 +5,14 @@ import Topbar from "../../navigation/Topbar";
 import img3 from "../../../images/classic 1.png";
 import "./FreeTrial.css";
 import { useNavigate } from "react-router";
+import Header from "../../Header/Header";
 
 const Billing = () => {
   const navigate = useNavigate()
   return (
     <>
-      <div
+      {/* <div
+
         className="courses_main_container"
         style={{ backgroundColor: "black" }}
       >
@@ -19,7 +21,11 @@ const Billing = () => {
             <Topbar />
           </div>
         </div>
-      </div>
+      </div> */}
+
+
+
+      <Header />
 
       <div className="BillingDiv">
         <div className="left">

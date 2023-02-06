@@ -4,11 +4,12 @@ import React from "react";
 import Topbar from "../../navigation/Topbar";
 import img from "../../../images/download.jpg";
 import "./FreeTrial.css";
+import Header from "../../Header/Header";
 
 const ThankYOu = () => {
   return (
     <>
-      <div
+      {/* <div
         className="courses_main_container"
         style={{ backgroundColor: "black" }}
       >
@@ -17,7 +18,8 @@ const ThankYOu = () => {
             <Topbar />
           </div>
         </div>
-      </div>
+      </div> */}
+        <Header />
 
       <img
         src={img}
