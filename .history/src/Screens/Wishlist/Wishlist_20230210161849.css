@@ -1,0 +1,12 @@
+.wishlist{
+    width: 90%;
+    background-color: #ebebeb;
+}
+.wishlist .head{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.wishlist .wishlistCart{
+    border: 1px solid black;
+    padding: 10px;
+}
