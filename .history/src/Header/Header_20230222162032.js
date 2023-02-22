@@ -47,7 +47,7 @@ function LoginModal(props) {
       alert("User Login Successfully");
       navigate("/allCou");
     } catch (err) {
-      alert(err.response.data.message)
+      alert()
     }
   };
 

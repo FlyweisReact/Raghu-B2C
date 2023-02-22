@@ -12,7 +12,6 @@ import FreeTrial from "./Screens/FreeTrial/FreeTrial";
 import Wishlist from "./Screens/Wishlist/Wishlist";
 import GetInTouch from "./Screens/GetInTouch/GetInTouch";
 import SecondCourse from "./Screens/AllCourses/SecondCourse";
-import About from "./Screens/GetInTouch/About";
 
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
         <Route exect path="/thank" element={<ThankYOu />} />
         <Route exect path="/wishlist" element={<Wishlist />} />
         <Route exect path="/getInTouch" element={<GetInTouch  /> } />
-        <Route exect path="/about" element={<About />} />
+        <Route exect path="/about" element
       </Routes>
     </div>
   );

@@ -47,7 +47,7 @@ function LoginModal(props) {
       alert("User Login Successfully");
       navigate("/allCou");
     } catch (err) {
-      alert(err.response.data.message)
+      console.log(err);
     }
   };
 
@@ -197,6 +197,7 @@ const Header = () => {
             <Link to={"/about"}>
               <li className="normalList">About</li>
             </Link>
+            <li className="normalList"> </li>
             <Link to={token ? "/allCou" : "/secondCourse"} >
               <li className="normalList">Courses</li>
             </Link>
