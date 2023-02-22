@@ -21,14 +21,12 @@ const Billing = () => {
             description: "Expert-Works",
             amount: {
               currency_code: "USD",
-              value: 1,
+              value: totalPrice,
             },
           },
         ]
       })
   };
-
-  // totalPrice
 
   // check Approval
   const onApprove = (data, actions) => {
@@ -39,6 +37,7 @@ const Billing = () => {
     });
   };
 
+  console.log(orderID)
 
 
 

@@ -21,7 +21,7 @@ const Billing = () => {
             description: "Expert-Works",
             amount: {
               currency_code: "USD",
-              value: 1,
+              value: ,
             },
           },
         ]
