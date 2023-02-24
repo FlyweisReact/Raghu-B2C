@@ -181,7 +181,7 @@ const Cart = () => {
                 }}
               >
                 {/* ${data?.total} */}
-                $1
+                $
               </p>
             </div>
             <div className="sub">

@@ -180,8 +180,8 @@ const Cart = () => {
                   fontWeight: "bold",
                 }}
               >
-                {/* ${data?.total} */}
-                $1
+                ${data?.total}
+                {/* $1 */}
               </p>
             </div>
             <div className="sub">

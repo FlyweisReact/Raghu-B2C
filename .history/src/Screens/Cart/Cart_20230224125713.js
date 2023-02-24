@@ -157,9 +157,9 @@ const Cart = () => {
 
                   <p>Save For Later</p>
                   <p onClick={() => {
-                      setId(i.course)
+                      setId(i._id)
                       setShow(true)
-                    }} style={{cursor : 'pointer'}}>Move to Wishlist</p>
+                    }}>Move to Watchlist</p>
                 </div>
                 <div className="price">
                   <p className="real"> ${i.price} </p>
@@ -180,8 +180,7 @@ const Cart = () => {
                   fontWeight: "bold",
                 }}
               >
-                {/* ${data?.total} */}
-                $1
+                ${data?.total}
               </p>
             </div>
             <div className="sub">

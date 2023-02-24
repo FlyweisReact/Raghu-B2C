@@ -233,9 +233,9 @@ const Header = () => {
                     {" "}
                   </i>
                 </li>
-                <li onClick={() => navigate("/cart")} style={{position : 'relative'}}>
-              <span style={{position : 'absolute' , right : '-12px' , top : '-10px' , color : 'red'}}>  {length}</span>
+                <li onClick={() => navigate("/cart")}>
                   <img
+                {length}
                     src={CartImg}
                     alt="Cart"
                     className="CartImg"

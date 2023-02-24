@@ -34,7 +34,7 @@ const Billing = () => {
     return actions.order.capture().then((details) => {
       setIsPaid(true);
       console.log("Transaction completed by " );
-      alert('Compelete')
+      alert('Complte')
       console.log(data)
       setOrderID(details.id);
       navigate("/thank");

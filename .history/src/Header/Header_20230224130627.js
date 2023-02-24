@@ -139,28 +139,15 @@ const Header = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const [modalShow, setModalShow] = React.useState(false);
-  const userId = localStorage.getItem("UserId")
+
   const [userDetailModal, setUserDetailModal] = React.useState(false);
-  const  [ length , setLength ] = useState("")
 
   let domNode = useClickOutside(() => {
     setOpen(false);
   });
 
 
-  const cartLength = async () => {
-    try{
-        const { data } = await axios.get(`https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/cart/length/${userId}`)
-        setLength(data?.message)
-
-    }catch(err){
-      console.log(err)
-    }
-  }
-
-  useEffect(() => {
-    cartLength()
-  },[userId])
+  const cartLength = async () 
 
 
   return (
@@ -233,8 +220,7 @@ const Header = () => {
                     {" "}
                   </i>
                 </li>
-                <li onClick={() => navigate("/cart")} style={{position : 'relative'}}>
-              <span style={{position : 'absolute' , right : '-12px' , top : '-10px' , color : 'red'}}>  {length}</span>
+                <li onClick={() => navigate("/cart")}>
                   <img
                     src={CartImg}
                     alt="Cart"

@@ -5,16 +5,13 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import auth from "../../Auth";
 import img from "../../images/cart 5.png";
-import {Modal , Button } from 'react-bootstrap'
 
 const Cart = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [cartId, setCartId] = useState("");
-  const [id, setId] = useState("");
-  const userId = localStorage.getItem("UserId");
-  const [ show , setShow ] = useState(false)
 
+  const userId = localStorage.getItem("UserId");
 
   const fetchHandler = useCallback(async () => {
     try {
@@ -52,7 +49,7 @@ const Cart = () => {
     }
   };
 
-
+  
 
 
   const goBack = () => {
@@ -72,50 +69,8 @@ const Cart = () => {
     }
   };
 
-
-  function Wishlist(props) {
-
-    const AddWishlist = async (e) => {
-      try{
-        const { data } = await axios.post("https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/addwishlist" , {
-          userId : userId , courseId : id
-        })
-        console.log(data)
-        alert("Course Added to Wishlist")
-        props.onHide()
-      }catch(Err){console.log(Err)}
-    }
-    
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-        style={{zIndex : 9999}}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <h4 style={{textAlign : 'center' , marginBottom : '20px'}}>Add To Wishlist</h4>
-          <div
-            style={{ display: "flex", justifyContent: "center", gap: "20px" }}
-          >
-            <Button variant="outline-danger" onClick={() => props.onHide()}>Decline</Button>
-            <Button variant="outline-success" onClick={() => AddWishlist()}>Confirm</Button>
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-        </Modal.Footer>
-      </Modal>
-    );
-  }
-
   return (
     <>
-    <Wishlist show={show} onHide={() => setShow(false)} />
       <div className="Cart">
         <div className="left">
           <p>Cart Details</p>
@@ -156,10 +111,7 @@ const Cart = () => {
                   </button>
 
                   <p>Save For Later</p>
-                  <p onClick={() => {
-                      setId(i.course)
-                      setShow(true)
-                    }} style={{cursor : 'pointer'}}>Move to Wishlist</p>
+                  <p>Move to Watchlist</p>
                 </div>
                 <div className="price">
                   <p className="real"> ${i.price} </p>
@@ -180,8 +132,7 @@ const Cart = () => {
                   fontWeight: "bold",
                 }}
               >
-                {/* ${data?.total} */}
-                $1
+                ${data?.total}
               </p>
             </div>
             <div className="sub">

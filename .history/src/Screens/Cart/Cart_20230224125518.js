@@ -5,16 +5,13 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import auth from "../../Auth";
 import img from "../../images/cart 5.png";
-import {Modal , Button } from 'react-bootstrap'
 
 const Cart = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [cartId, setCartId] = useState("");
-  const [id, setId] = useState("");
-  const userId = localStorage.getItem("UserId");
-  const [ show , setShow ] = useState(false)
 
+  const userId = localStorage.getItem("UserId");
 
   const fetchHandler = useCallback(async () => {
     try {
@@ -115,7 +112,6 @@ const Cart = () => {
 
   return (
     <>
-    <Wishlist show={show} onHide={() => setShow(false)} />
       <div className="Cart">
         <div className="left">
           <p>Cart Details</p>
@@ -156,10 +152,7 @@ const Cart = () => {
                   </button>
 
                   <p>Save For Later</p>
-                  <p onClick={() => {
-                      setId(i.course)
-                      setShow(true)
-                    }} style={{cursor : 'pointer'}}>Move to Wishlist</p>
+                  <p>Move to Watchlist</p>
                 </div>
                 <div className="price">
                   <p className="real"> ${i.price} </p>
@@ -180,8 +173,7 @@ const Cart = () => {
                   fontWeight: "bold",
                 }}
               >
-                {/* ${data?.total} */}
-                $1
+                ${data?.total}
               </p>
             </div>
             <div className="sub">

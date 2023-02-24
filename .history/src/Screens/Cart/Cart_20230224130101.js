@@ -135,6 +135,9 @@ const Cart = () => {
       </div>
 
       <div className="bigCart">
+      <div className="down">
+          <button>Manage Order</button>
+        </div>
         <div className="upper">
           <div className="left">
             <p className="title">{data?.quatotal} Course in Cart</p>
@@ -180,8 +183,7 @@ const Cart = () => {
                   fontWeight: "bold",
                 }}
               >
-                {/* ${data?.total} */}
-                $1
+                ${data?.total}
               </p>
             </div>
             <div className="sub">
