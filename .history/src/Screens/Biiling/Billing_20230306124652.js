@@ -41,10 +41,6 @@ const Billing = () => {
   //   });
   // };
 
-
-    // 'client_id':'Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW',
-
-
   return (
     <>
       <Header />
@@ -196,7 +192,7 @@ const Billing = () => {
           <PayPalScriptProvider
             options={{
               "client-id":
-              "Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW"
+                "ATdysrjgkk_eI5vhi9XgXaZPDOHY2XbqtfcC3e_9PV2Kz1Vhb-ZG0-t9j_mwNRgE23950RjiOMYg8zPY",
             }}
           >
             <PayPalButtons
@@ -207,19 +203,14 @@ const Billing = () => {
                       description: "Expert-Works",
                       amount: {
                         currency_code: "USD",
-                        value: 1,
+                        value: 0.01,
                       },
                     },
                   ],
                 });
               }}
-              onApprove={( data, actions) => {
-                return actions.order.capture().then( function (details) {
-                  alert(
-                    "Transaction Completed by " + details.payer.name.given_name
-                    )
-                });
-              }}
+
+              
             />
           </PayPalScriptProvider>
         </div>

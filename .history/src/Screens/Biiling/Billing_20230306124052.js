@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import Header from "../../Header/Header";
 // import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 // import { PayPalButton } from "react-paypal-button-v2";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import {PayPalScriptProvider , PayPalButtons} from '@paypal/react-paypal-js'
 
 const Billing = () => {
   const navigate = useNavigate();
@@ -29,6 +29,7 @@ const Billing = () => {
   //   });
   // };
 
+
   // // check Approval
   // const onApprove = (data, actions) => {
   //   return actions.order.capture().then((details) => {
@@ -42,7 +43,7 @@ const Billing = () => {
   // };
 
 
-    // 'client_id':'Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW',
+
 
 
   return (
@@ -193,35 +194,15 @@ const Billing = () => {
             />
           </PayPalScriptProvider> */}
 
-          <PayPalScriptProvider
-            options={{
-              "client-id":
-              "Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW"
-            }}
-          >
-            <PayPalButtons
-              createOrder={(data, actions) => {
-                return actions.order.create({
-                  purchase_units: [
-                    {
-                      description: "Expert-Works",
-                      amount: {
-                        currency_code: "USD",
-                        value: 1,
-                      },
-                    },
-                  ],
-                });
-              }}
-              onApprove={( data, actions) => {
-                return actions.order.capture().then( function (details) {
-                  alert(
-                    "Transaction Completed by " + details.payer.name.given_name
-                    )
-                });
-              }}
-            />
-          </PayPalScriptProvider>
+
+          <Pa
+
+
+
+
+  
+
+
         </div>
 
         <div className="right">
@@ -241,6 +222,8 @@ const Billing = () => {
           <h6>Total</h6>
         </div>
       </div>
+
+  
     </>
   );
 };

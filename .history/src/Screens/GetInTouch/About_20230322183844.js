@@ -5,6 +5,8 @@ import Header from "../../Header/Header";
 import img from "../../images/about us image.png";
 import Footer from "../../Footer";
 import axios from "axios";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const [data, setData] = useState([]);

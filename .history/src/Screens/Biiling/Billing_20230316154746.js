@@ -42,7 +42,7 @@ const Billing = () => {
   // };
 
 
-    // 'client_id':'Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW',
+    'client_id':'Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW',
 
 
   return (
@@ -196,7 +196,7 @@ const Billing = () => {
           <PayPalScriptProvider
             options={{
               "client-id":
-              "Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW"
+                "ATdysrjgkk_eI5vhi9XgXaZPDOHY2XbqtfcC3e_9PV2Kz1Vhb-ZG0-t9j_mwNRgE23950RjiOMYg8zPY",
             }}
           >
             <PayPalButtons

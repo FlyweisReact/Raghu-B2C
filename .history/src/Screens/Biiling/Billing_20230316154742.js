@@ -42,8 +42,10 @@ const Billing = () => {
   // };
 
 
-    // 'client_id':'Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW',
-
+    'mode': 'sandbox', //sandbox or live
+    'client_id':'Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW',
+    'client_secret':'EMSUc5-u1y_XxFRhKqoq9kypj5hXyhfj-P-_fTNAeps-zxwNG9h9ORGaCRVAZD7SkXc8imZTDRlAJS8z'
+  })
 
   return (
     <>
@@ -196,7 +198,7 @@ const Billing = () => {
           <PayPalScriptProvider
             options={{
               "client-id":
-              "Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW"
+                "ATdysrjgkk_eI5vhi9XgXaZPDOHY2XbqtfcC3e_9PV2Kz1Vhb-ZG0-t9j_mwNRgE23950RjiOMYg8zPY",
             }}
           >
             <PayPalButtons

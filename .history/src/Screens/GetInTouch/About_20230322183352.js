@@ -8,6 +8,7 @@ import axios from "axios";
 
 const About = () => {
   const [data, setData] = useState([]);
+  const navigate = useN
 
   const fetchData = async () => {
     try {
@@ -31,8 +32,7 @@ const About = () => {
         <p>Live training session in 23hrs:35mins:44sec </p>
         
         <a href="secondCourse#reg">
-        <button style={{ cursor: "pointer" }} >Register now</button>
-
+          <button style={{ cursor: "pointer" }}>Register now</button>
         </a>
       </div>
 
@@ -80,7 +80,7 @@ const About = () => {
 
 
         {data?.data?.map((i ,index) => (
-          <div className="main" key={index}>
+          <div className="main">
           <img src={i.image} alt="" />
           <div className="desc">
             <p> {i.name} </p>

@@ -5,9 +5,12 @@ import Header from "../../Header/Header";
 import img from "../../images/about us image.png";
 import Footer from "../../Footer";
 import axios from "axios";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate()
 
   const fetchData = async () => {
     try {
@@ -33,7 +36,7 @@ const About = () => {
         <a href="secondCourse#reg">
         <button style={{ cursor: "pointer" }} >Register now</button>
 
-        </a>
+        {/* </a> */}
       </div>
 
       <div className="abouttwo-sec">

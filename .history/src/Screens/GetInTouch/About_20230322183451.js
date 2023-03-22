@@ -5,9 +5,12 @@ import Header from "../../Header/Header";
 import img from "../../images/about us image.png";
 import Footer from "../../Footer";
 import axios from "axios";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const [data, setData] = useState([]);
+  const navigate = useNavigate()
 
   const fetchData = async () => {
     try {
@@ -30,10 +33,10 @@ const About = () => {
       <div className="courseBanner">
         <p>Live training session in 23hrs:35mins:44sec </p>
         
-        <a href="secondCourse#reg">
-        <button style={{ cursor: "pointer" }} >Register now</button>
-
-        </a>
+        {/* <a href="secondCourse#reg"> */}
+        <Link 
+          <button style={{ cursor: "pointer" }} >Register now</button>
+        {/* </a> */}
       </div>
 
       <div className="abouttwo-sec">
@@ -80,7 +83,7 @@ const About = () => {
 
 
         {data?.data?.map((i ,index) => (
-          <div className="main" key={index}>
+          <div className="main">
           <img src={i.image} alt="" />
           <div className="desc">
             <p> {i.name} </p>

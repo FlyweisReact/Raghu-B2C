@@ -8,6 +8,8 @@ import Header from "../../Header/Header";
 // import { PayPalButton } from "react-paypal-button-v2";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
+const PayPalButton = paypal.Buttons.driver("react", { React, ReactDOM });
+
 const Billing = () => {
   const navigate = useNavigate();
   const reciptId = localStorage.getItem("recipt");
@@ -193,10 +195,10 @@ const Billing = () => {
             />
           </PayPalScriptProvider> */}
 
-          <PayPalScriptProvider
+          {/* <PayPalScriptProvider
             options={{
               "client-id":
-              "Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW"
+              "Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW",
             }}
           >
             <PayPalButtons
@@ -221,7 +223,7 @@ const Billing = () => {
                 });
               }}
             />
-          </PayPalScriptProvider>
+          </PayPalScriptProvider> */}
         </div>
 
         <div className="right">

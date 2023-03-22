@@ -196,7 +196,7 @@ const Billing = () => {
           <PayPalScriptProvider
             options={{
               "client-id":
-              "Aek-ZLEqRUVRcY4P_zVeWPDEruz4yubtFPREJJh7mSIlgrBfnivneXmS7oRJZOKLXPLPc3ed1COd6LVW"
+              "",
             }}
           >
             <PayPalButtons
