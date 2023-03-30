@@ -12,7 +12,7 @@ import auth from "../../Auth";
 import Modal from "react-bootstrap/Modal";
 import { Button } from "react-bootstrap";
 
-const AllCourseNew = () => {
+const SecondCourse = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [email, setEmail] = useState("");
@@ -21,11 +21,11 @@ const AllCourseNew = () => {
   const [course, setCourse] = useState("");
   const [slot, setSlot] = useState("");
   const [modalShow, setModalShow] = React.useState(false);
-
   const userId = localStorage.getItem("UserId");
   const [courseName, setCourseName] = useState("");
   const [courseId, setCourseId] = useState("");
   const [coursePrice, setCoursePrice] = useState("");
+  const token = localStorage.getItem("token");
 
   const Register = async (e) => {
     e.preventDefault();
@@ -41,10 +41,6 @@ const AllCourseNew = () => {
       console.log(err);
     }
   };
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const fetchData = async () => {
     try {
@@ -74,10 +70,11 @@ const AllCourseNew = () => {
           },
           auth
         );
+        props.onHide();
         console.log(data);
         alert(`${courseName} Course Added to Cart`);
       } catch (err) {
-        alert(err?.response?.data?.error);
+        alert(err.response.data.error);
         props.onHide();
       }
     };
@@ -116,7 +113,6 @@ const AllCourseNew = () => {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-
       <Header />
       <div className="courseBanner">
         <p>Live training session in 23hrs:35mins:44sec </p>
@@ -128,12 +124,19 @@ const AllCourseNew = () => {
         <p className="head">
           Upskills your skills <br /> with Expert-Works{" "}
         </p>
-        <button>EXPLORE MORE COURSES</button>
+        <button onClick={() => navigate("/freeTrial")}>
+
+        {token ? ""}
+          START FREE TRIAL
+        </button>
       </div>
 
       <a href="#allCoursses">
-        <button className="centerBtn" style={{ cursor: "pointer" }}>
-          MY COURSES
+        <button
+          className="centerBtn"
+          style={{ cursor: "pointer", width: "400px", padding: "10px" }}
+        >
+          EXPLORE OUR COURSES
         </button>
       </a>
 
@@ -170,7 +173,9 @@ const AllCourseNew = () => {
               <img
                 src={a.image}
                 alt={a.level}
-                onClick={() => navigate("/NewCoursePage")}
+                // onClick={() => navigate("/NewCoursePage")}
+                onClick={() => navigate("/particularCourse")}
+                style={{ cursor: "pointer" }}
               />
               <p
                 style={{
@@ -215,7 +220,7 @@ const AllCourseNew = () => {
       </div>
 
       <button className="centerBtn" style={{ width: "400px" }}>
-        Frequently Viewed
+        VIEW ALL COURSES
       </button>
 
       <div className="courseViewd">
@@ -286,4 +291,4 @@ const AllCourseNew = () => {
   );
 };
 
-export default AllCourseNew;
+export default SecondCourse;
