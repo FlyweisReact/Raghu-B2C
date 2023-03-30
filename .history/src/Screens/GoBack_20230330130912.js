@@ -1,0 +1,14 @@
+import React from 'react'
+import { useNavigate } from 'react-router'
+
+const GoBack = () => {
+    const navigate = useNavigate()
+    function GoBack() { 
+        navigate(-1)
+    }
+  return (
+    <div>GoBack</div>
+  )
+}
+
+export default GoBack
