@@ -6,7 +6,8 @@ import { Modal } from "react-bootstrap";
 function UserDashModal(props) {
   const navigate = useNavigate();
   function SignOut() {
-    localStorage.clear();
+    localStorage.removeItem('token');
+    localStorage.removeItem('UserId');
     props.onHide();
   }
 

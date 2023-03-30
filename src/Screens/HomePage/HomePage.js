@@ -17,6 +17,7 @@ import person3 from '../../images/person 3.jpg'
 import cyberSecurity from '../../images/cyber security.jpg'
 import { useNavigate } from "react-router";
 import Header from '../../Header/Header'
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -36,7 +37,8 @@ const HomePage = () => {
             market.
           </p>
           <div className="btns">
-            <button
+          <Link to='/freeTrial'>
+          <button
               style={{
                 backgroundColor: "#426fec",
                 color: "#fff",
@@ -47,12 +49,14 @@ const HomePage = () => {
                 padding: "10px",
                 cursor : 'pointer'
               }}
-              onClick={() => navigate('/freeTrial')}
+            
             >
               Start free Trial
             </button>
-            <button
-              style={{
+          </Link>
+          <Link to='/secondCourse'>
+          <button
+               style={{
                 backgroundColor: "#fff",
                 color: "#426fec",
                 width: "200px",
@@ -62,10 +66,12 @@ const HomePage = () => {
                 padding: "10px",
                 cursor : 'pointer'
               }}
-              onClick={() => navigate('/allCou')}
+            
             >
               Our Courses <i class="fa-solid fa-arrow-down"></i>
             </button>
+          </Link>
+          
           </div>
         </div>
         <div className="right">
@@ -90,7 +96,8 @@ const HomePage = () => {
             market.
           </p>
           <div className="btns">
-            <button
+          <Link to='/about'>
+          <button
               style={{
                 backgroundColor: "#426fec",
                 color: "#fff",
@@ -103,6 +110,8 @@ const HomePage = () => {
             >
               More about us
             </button>
+          </Link>
+         
           </div>
         </div>
       </div>

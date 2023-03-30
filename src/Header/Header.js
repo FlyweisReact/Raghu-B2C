@@ -33,8 +33,10 @@ const Header = () => {
   }, [userId]);
 
   useEffect(() => {
-    cartLength();
-  }, [cartLength]);
+    if(token){
+      cartLength()
+    }
+  }, [token , cartLength]);
 
   return (
     <>
@@ -54,7 +56,7 @@ const Header = () => {
           </div>
 
           <div className="under">
-            <i class="fa-solid fa-phone"></i>
+            <i className="fa-solid fa-phone"></i>
             <div>
               <p>+1 512-277-3004</p>
               <p>+91 9347113488</p>
@@ -69,7 +71,7 @@ const Header = () => {
             rel="noreferrer"
             style={{ color: "black" }}
           >
-            <i class="fa-brands fa-square-facebook"></i>
+            <i className="fa-brands fa-square-facebook"   style={{  color: "#426fec" }}></i>
           </a>
 
           <a
@@ -78,7 +80,7 @@ const Header = () => {
             rel="noreferrer"
             style={{ color: "black" }}
           >
-            <i class="fa-brands fa-square-instagram"></i>
+            <i className="fa-brands fa-square-instagram" style={{  color: "#8441b0" }}></i>
           </a>
         </div>
       </div>
@@ -100,9 +102,6 @@ const Header = () => {
             <Link to={"/secondCourse"}>
               <li className="normalList">Courses</li>
             </Link>
-            {/* <Link to={token ? "/allCou" : "/secondCourse"}>
-              <li className="normalList">Courses</li>
-            </Link> */}
             <Link to={"/resource"}>
               <li className="normalList">Resources</li>
             </Link>
@@ -114,7 +113,7 @@ const Header = () => {
 
                 <li onClick={() => navigate("/wishlist")}>
                   <i
-                    class="fa-solid fa-heart normalList"
+                    className="fa-solid fa-heart normalList"
                     style={{ color: "red" }}
                   >
                     {" "}
@@ -165,7 +164,7 @@ const Header = () => {
                 </Link>
                 <li>
                   <i
-                    class="fa-solid fa-magnifying-glass normalList"
+                    className="fa-solid fa-magnifying-glass normalList"
                     style={{ cursor: "pointer" }}
                   ></i>
                 </li>
@@ -174,7 +173,7 @@ const Header = () => {
           </ul>
           <div className="sideBarMenu">
             <i
-              class="fa-solid fa-bars"
+              className="fa-solid fa-bars"
               onClick={() => setShow(true)}
               style={{ cursor: "pointer" }}
             ></i>

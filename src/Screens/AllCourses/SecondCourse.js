@@ -27,6 +27,8 @@ const SecondCourse = () => {
   const [coursePrice, setCoursePrice] = useState("");
   const token = localStorage.getItem("token");
   const [show, setShow] = useState(false);
+  const [purchaseData, setPurchaseData] = useState([]);
+  const [videoUrl, setVideoUrl] = useState("");
 
   const Register = async (e) => {
     e.preventDefault();
@@ -54,8 +56,20 @@ const SecondCourse = () => {
     }
   };
 
+  const fetchPurchase = async () => {
+    try {
+      const { data } = await axios.get(
+        `https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/user/641ae82ccbf0088ed19942fb`
+      );
+      setPurchaseData(data.result.courseId);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   useEffect(() => {
     fetchData();
+    fetchPurchase();
   }, []);
 
   function AddToCart(props) {
@@ -119,10 +133,7 @@ const SecondCourse = () => {
         <Modal.Body style={{ padding: "0" }}>
           <div className="VideoModal">
             <video controls>
-              <source
-                src="https://d3s24np0er9fug.cloudfront.net/phase1/public/LMS%20New.mp4"
-                type="video/mp4"
-              />
+              <source src={videoUrl} type="video/mp4" />
             </video>
           </div>
         </Modal.Body>
@@ -207,11 +218,11 @@ const SecondCourse = () => {
       <div className="courseCarousel">
         {token ? (
           <>
-            {data?.message?.map((i, index) =>
-              i.levels.map((a, index) => (
+            {purchaseData?.map((i, index) =>
+              i.course?.levels?.map((item, index) => (
                 <div className="mainDiv" key={index}>
                   <img
-                    src={a.image}
+                    src={item.image}
                     alt=""
                     onClick={() => navigate("/particularCourse")}
                     style={{ cursor: "pointer" }}
@@ -223,7 +234,8 @@ const SecondCourse = () => {
                       textAlign: "center",
                     }}
                   >
-                    {a.title}
+                    {" "}
+                    {item.title}{" "}
                   </p>
                   <p
                     style={{
@@ -232,7 +244,7 @@ const SecondCourse = () => {
                       textAlign: "center",
                     }}
                   >
-                    {a.about?.substring(0, 200) + "..."}
+                    {item.about?.substring(0, 200) + "..."}
                   </p>
                   <div className="btnDiv">
                     <button
@@ -243,7 +255,10 @@ const SecondCourse = () => {
                         width: "90%",
                         fontWeight: "bold",
                       }}
-                      onClick={() => setShow(true)}
+                      onClick={() => {
+                        setVideoUrl(item.video);
+                        setShow(true);
+                      }}
                     >
                       PLAY
                     </button>
@@ -255,7 +270,7 @@ const SecondCourse = () => {
         ) : (
           <>
             {" "}
-            {data?.message?.map((i, index) =>
+            {data?.map((i, index) =>
               i.levels.map((a, index) => (
                 <div className="mainDiv" key={index}>
                   <img

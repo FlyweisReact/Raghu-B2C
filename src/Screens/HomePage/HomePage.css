@@ -1,3 +1,8 @@
+*{
+  scroll-behavior: smooth;
+}
+
+
 /** @format */
 .mainSecTwo {
   display: flex;

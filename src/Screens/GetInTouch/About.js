@@ -24,6 +24,7 @@ const About = () => {
 
   useEffect(() => {
     fetchData();
+    window.scrollTo(0, 0);
   }, []);
 
   return (

@@ -1,41 +1,53 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import LoginModal from "./Modals/LoginModal";
 
 const Footer = () => {
+  const [open, setOpen] = useState(false);
   return (
     <>
+      <LoginModal show={open} onHide={() => setOpen(false)} />
       <div className="NewFooter">
         <div>
-       
           <ul>
-          <p className="head">Contact</p>
+            <p className="head">Contact</p>
             <li>Expert Technologies LLC</li>
             <li>1205 BMC Drive Suite 1803-E, Cedar Park, TX 78613.</li>
             <li>+1 (646) 727 9169</li>
             <li>sales@expert-works.com</li>
-            <li> 
+            <li>
               <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
-                <i
-                  class="fa-brands fa-square-facebook"
-                  style={{ fontSize: "2rem", color: "#426fec" }}
-                ></i>
-                <i
-                  class="fa-brands fa-square-twitter"
-                  style={{ fontSize: "2rem", color: "#1c96e8" }}
-                ></i>
-                <i
-                  class="fa-brands fa-square-instagram"
-                  style={{ fontSize: "2rem", color: "#8441b0" }}
-                ></i>
+                <a
+                  href="https://www.facebook.com/Expertworks2021"
+                  target={"_blank"}
+                  rel="noreferrer"
+                  style={{ color: "black" }}
+                >
+                  <i
+                    className="fa-brands fa-square-facebook"
+                    style={{ fontSize: "2rem", color: "#426fec" }}
+                  ></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/expertworks2020/"
+                  target={"_blank"}
+                  rel="noreferrer"
+                  style={{ color: "black" }}
+                >
+                  <i
+                    className="fa-brands fa-square-instagram"
+                    style={{ fontSize: "2rem", color: "#8441b0" }}
+                  ></i>
+                </a>
               </div>
             </li>
           </ul>
         </div>
         <div>
-          
           <ul>
-          <p className="head">Quick Links</p>
+            <p className="head">Quick Links</p>
             <li>Frequently asked questions </li>
             <li>Terms & Conditions</li>
             <li>Privacy policy</li>
@@ -43,9 +55,13 @@ const Footer = () => {
         </div>
         <div>
           <ul>
-          <p className="head">More</p>
-            <li>About us </li>
-            <li>Login</li>
+            <p className="head">More</p>
+            <Link to="/about" style={{ color: "black" }}>
+              <li>About us </li>
+            </Link>
+            <li onClick={() => setOpen(true)} style={{ cursor: "pointer" }}>
+              Login
+            </li>
           </ul>
         </div>
       </div>
