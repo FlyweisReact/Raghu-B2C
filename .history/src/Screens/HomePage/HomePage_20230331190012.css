@@ -1933,7 +1933,7 @@
   border: 1px solid black;
   padding: 5px;
   margin-top: 5px;
-
+  
 }
 .CourseDetail .head {
   font-style: normal;
@@ -1950,7 +1950,6 @@
   font-size: 25px;
   line-height: 51px;
   color: #fff;
-  cursor: pointer;
 }
 .CourseDetail button {
   font-style: normal;

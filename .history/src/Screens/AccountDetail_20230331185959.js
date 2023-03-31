@@ -68,7 +68,7 @@ const AccountDetail = () => {
         <ul>
           <li>Introduction</li>
           {data.map((i, index) => (
-            <li key={index} onClick={() => setModalShow(true)}> {i.title} </li>
+            <li key={index}> {i.title} </li>
           ))}
         </ul>
         <button onClick={() => setOpen(!open)}>

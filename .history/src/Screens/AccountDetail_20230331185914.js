@@ -67,9 +67,15 @@ const AccountDetail = () => {
         <p className="head">Java Beginner Sessions</p>
         <ul>
           <li>Introduction</li>
-          {data.map((i, index) => (
-            <li key={index} onClick={() => setModalShow(true)}> {i.title} </li>
-          ))}
+          <li>Session 1</li>
+          <li>Session 2</li>
+          <li>Session 3</li>
+          <li>Session 4</li>
+          <li>Session 5</li>
+          <li>Session 6</li>
+          <li>Session 7</li>
+          <li>Session 8</li>
+          <li>Session 9</li>
         </ul>
         <button onClick={() => setOpen(!open)}>
           Documents <i className="fa-sharp fa-solid fa-caret-down"></i>
@@ -101,12 +107,12 @@ const AccountDetail = () => {
       </div>
 
       <div className="courseDetail3">
-        {data.map((i, index) => (
-          <div className="main" onClick={() => setModalShow(true)}>
-            <p> {i.title} </p>
-            <img src={img1} alt="" />
-          </div>
-        ))}
+      {data.map((i , index) => (
+        <div className="main" onClick={() => setModalShow(true)}>
+          <p> {i.title} </p>
+          <img src={img1} alt="" />
+        </div>
+      ))}
       </div>
     </>
   );
