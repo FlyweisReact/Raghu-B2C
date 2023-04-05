@@ -13,7 +13,7 @@ const Cart = () => {
   const [id, setId] = useState("");
   const userId = localStorage.getItem("UserId");
   const [show, setShow] = useState(false);
-  const [ total , setTotal  ] = useState('')
+  const [total, setTotal] = useState("");
 
   const fetchHandler = useCallback(async () => {
     try {
@@ -21,7 +21,7 @@ const Cart = () => {
         `https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/cart/${userId}`
       );
       setData(data);
-      setTotal(Math.round(data.result[0].total))
+      setTotal(Math.round(data.result[0].total));
       setCartId(data._id);
       localStorage.setItem("Total", data.total);
     } catch (err) {
@@ -144,7 +144,9 @@ const Cart = () => {
                 item?.course?.levels?.map((a, index) => (
                   <div className="box" key={index}>
                     <img src={a?.image} alt="" style={{ padding: "10px" }} />
-                    <p className="next" style={{textTransform : 'uppercase'}}>{a?.title}</p>
+                    <p className="next" style={{ textTransform: "uppercase" }}>
+                      {a?.title}
+                    </p>
                     <div className="remove">
                       <button
                         onClick={() => removeHandler(item._id)}
@@ -173,7 +175,6 @@ const Cart = () => {
                       <p className="real"> ${a?.actualPrice} </p>
                       <p className="fake">${a?.price}</p>
                       <p>Quantity :{item?.quantity} </p>
-                 
                     </div>
                   </div>
                 ))
@@ -200,9 +201,7 @@ const Cart = () => {
                 $39.95
               </p>
             </div>
-            <button onClick={() =>   navigate("/billing")} >
-              CheckOut
-            </button>
+            <button onClick={() => navigate("/billing")}>CheckOut</button>
 
             <div className="coupon">
               <p className="head">Promotions</p>

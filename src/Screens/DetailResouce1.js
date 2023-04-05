@@ -1,7 +1,6 @@
 /** @format */
 
 import React, { useEffect } from "react";
-import Header from "../Header/Header";
 import img from "../images/image 1.png";
 import img2 from "../images/image 2.png";
 import img3 from "../images/image 3.png";
@@ -55,7 +54,6 @@ const DetailResouce1 = () => {
     })
   return (
     <>
-      {/* <Header /> */}
       <div className="detailResourceFirst">
         <img src={img} alt="" />
         <p style={{fontSize : '1.4rem' , marginTop : '20px'}}>Your first impression matters and it’s your responsibility to make sure that your first impression is up to the mark, especially in a job interview. Let’s discuss the top 5 tips to help you crack a job interview.</p>
