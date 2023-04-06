@@ -19,6 +19,7 @@ const Cart = () => {
   const [showTotal, setShowTotal] = useState(false);
   const [itemQuantity, setCartQuantity] = useState("");
 
+  const [ appyCoupon , setApplyCoupon   ] =
 
   const totalPrice = Math.round((couponPercentage / 100) * total);
   const actualPrice = totalPrice ? parseInt(totalPrice) : parseInt(total);
@@ -250,7 +251,6 @@ const Cart = () => {
                   </option>
                 ))}
               </select>
-
               {/* {couponData?.map((i, index) => (
                 <div key={index} className="tww">
                   <p>{i.code} </p>
