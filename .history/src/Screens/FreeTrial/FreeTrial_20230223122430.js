@@ -26,7 +26,7 @@ const FreeTrial = () => {
        localStorage.setItem("token" , data.token)
        localStorage.setItem("UserId" , data.user._id)
        setShow(false)
-    navigate('/secondCourse')
+    navigate('/allCou')
     }catch(err){
       alert(err.response.data.message)
       

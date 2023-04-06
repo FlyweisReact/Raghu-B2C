@@ -14,31 +14,25 @@ const Cart = () => {
   const userId = localStorage.getItem("UserId");
   const [show, setShow] = useState(false);
   const [total, setTotal] = useState("");
-  const [couponData, setCouponData] = useState([]);
-  const [couponPercentage, setCouponPercentage] = useState("");
-  const [showTotal, setShowTotal] = useState(false);
-  const [itemQuantity, setCartQuantity] = useState("");
-  const totalPrice = Math.round((couponPercentage / 100) * total);
-
-  const actualPrice = totalPrice ? parseInt(totalPrice) : parseInt(total);
+  const [ couponData , setCouponData ] = useState([])
 
   const fetchCoupons = async () => {
-    try {
-      const { data } = await axios.get(
-        "https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/coupon"
-      );
-      setCouponData(data);
-    } catch (e) {
-      console.log(e);
+    try {   
+      const { data } = await axios.get("https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/coupon")
+      setCouponData(data)
+      console.log(data)
+    }catch(e) { 
+      console.log(e)
     }
-  };
+
+  }
+
 
   const fetchHandler = useCallback(async () => {
     try {
       const { data } = await axios.get(
         `https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/cart/${userId}`
       );
-      setCartQuantity(data.qua);
       setData(data);
       setTotal(Math.round(data.result[0].total));
       setCartId(data.result[0]._id);
@@ -51,8 +45,9 @@ const Cart = () => {
   useEffect(() => {
     if (userId) {
       fetchHandler();
+      
     }
-    fetchCoupons();
+    fetchCoupons()
   }, [fetchHandler, userId]);
 
   const removeHandler = async (id) => {
@@ -82,14 +77,13 @@ const Cart = () => {
         {
           userId,
           cartId,
-          quantity: 1,
-          actualPrice: actualPrice,
+          quantity: 5,
         }
       );
 
       console.log(data);
-      console.log(data.result.url);
-      window.location.href = data.result.url;
+      console.log(data.result.url )
+      window.location.href = data.result.url
     } catch (err) {
       console.log(err);
     }
@@ -143,6 +137,7 @@ const Cart = () => {
       </Modal>
     );
   }
+
   return (
     <>
       <Wishlist show={show} onHide={() => setShow(false)} />
@@ -218,16 +213,13 @@ const Cart = () => {
                   fontWeight: "bold",
                 }}
               >
-                ${showTotal ? totalPrice : total}
+                {total}
               </p>
             </div>
             <div className="sub">
-              <p style={{ fontSize: "20px" }}>
-                {" "}
-                Total Savings ({couponPercentage}%):{" "}
-              </p>
+              <p style={{ fontSize: "20px" }}> Total Savings (80%): </p>
               <p style={{ color: "#c2c2c2", textDecoration: " line-through" }}>
-                ${total - totalPrice}
+                $39.95
               </p>
             </div>
             <button
@@ -240,32 +232,16 @@ const Cart = () => {
 
             <div className="coupon">
               <p className="head">Promotions</p>
-              <select onChange={(e) => setCouponPercentage(e.target.value)}>
-                <option>-Select Coupon--</option>
-                {couponData?.map((i, index) => (
-                  <option key={index} value={i.discount}>
-                    {" "}
-                    {i.code} {i.discount}%{" "}
-                  </option>
-                ))}
-              </select>
-              {/* {couponData?.map((i, index) => (
-                <div key={index} className="tww">
-                  <p>{i.code} </p>
-                  <p
-                    style={{ color: "#c2c2c2", textDecoration: "line-through" }}
-                  >
-                    {" "}
-                    {i.discount}%{" "}
-                  </p>
-                </div>
-              ))} */}
+              <div className="tww">
+              {couponData?.map(())}
+                <p>EXPERTWORKS</p>
+                <p style={{ color: "#c2c2c2", textDecoration: "line-through" }}>
+                  $70.00
+                </p>
+              </div>
               <div className="tww2">
-                {/* <input type="text" placeholder="Enter Coupon" />{" "} */}
-                <button onClick={() => setShowTotal(!showTotal)}>
-                  {" "}
-                  {showTotal ? "Remove" : "Apply"}{" "}
-                </button>
+                <input type="text" placeholder="Enter Coupon" />{" "}
+                <button>Apply</button>
               </div>
             </div>
           </div>

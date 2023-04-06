@@ -839,7 +839,11 @@
   outline: none;
   background-color: #0066cc;
   color: #fff;
-  }
+  
+}
+.bigCart .coupon select option{
+  background-color: ;
+}
 .bigCart .coupon .tww {
   display: flex;
   gap: 20px;
@@ -859,8 +863,8 @@
 
 .bigCart .coupon .tww2 button {
   font-size: 20px;
-  width: 100%;
-  padding: 10px;
+  width: 40%;
+  padding: 0px;
 }
 
 .bigCart .upper .left .box .next {

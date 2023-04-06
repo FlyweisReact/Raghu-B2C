@@ -82,7 +82,7 @@ const Cart = () => {
         {
           userId,
           cartId,
-          quantity: 1,
+          quantity: itemQuantity,
           actualPrice: actualPrice,
         }
       );

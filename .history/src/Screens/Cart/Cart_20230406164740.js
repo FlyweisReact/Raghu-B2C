@@ -82,7 +82,7 @@ const Cart = () => {
         {
           userId,
           cartId,
-          quantity: 1,
+          quantity: itemQuantity,
           actualPrice: actualPrice,
         }
       );
@@ -227,7 +227,7 @@ const Cart = () => {
                 Total Savings ({couponPercentage}%):{" "}
               </p>
               <p style={{ color: "#c2c2c2", textDecoration: " line-through" }}>
-                ${total - totalPrice}
+                {total - totalPrice}
               </p>
             </div>
             <button

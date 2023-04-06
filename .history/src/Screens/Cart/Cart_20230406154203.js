@@ -16,11 +16,12 @@ const Cart = () => {
   const [total, setTotal] = useState("");
   const [couponData, setCouponData] = useState([]);
   const [couponPercentage, setCouponPercentage] = useState("");
-  const [showTotal, setShowTotal] = useState(false);
-  const [itemQuantity, setCartQuantity] = useState("");
-  const totalPrice = Math.round((couponPercentage / 100) * total);
+  const [ showTotal , setShowTotal] = useState(false)
+  const [ itemQuantity , setCartQuantity ] = useState("")
+  const totalPrice = couponPercentage/total * 100
 
-  const actualPrice = totalPrice ? parseInt(totalPrice) : parseInt(total);
+  const actualPrice = totalPrice ? totalPrice : total
+
 
   const fetchCoupons = async () => {
     try {
@@ -38,7 +39,8 @@ const Cart = () => {
       const { data } = await axios.get(
         `https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/cart/${userId}`
       );
-      setCartQuantity(data.qua);
+      console.log()
+      setCartQuantity()
       setData(data);
       setTotal(Math.round(data.result[0].total));
       setCartId(data.result[0]._id);
@@ -82,8 +84,8 @@ const Cart = () => {
         {
           userId,
           cartId,
-          quantity: 1,
-          actualPrice: actualPrice,
+          quantity: 5,
+          total:actualPrice
         }
       );
 
@@ -218,16 +220,14 @@ const Cart = () => {
                   fontWeight: "bold",
                 }}
               >
-                ${showTotal ? totalPrice : total}
+              {showTotal ? totalPrice : total}
+                {/* {total} */}
               </p>
             </div>
             <div className="sub">
-              <p style={{ fontSize: "20px" }}>
-                {" "}
-                Total Savings ({couponPercentage}%):{" "}
-              </p>
+              <p style={{ fontSize: "20px" }}> Total Savings (80%): </p>
               <p style={{ color: "#c2c2c2", textDecoration: " line-through" }}>
-                ${total - totalPrice}
+                $39.95
               </p>
             </div>
             <button
@@ -262,10 +262,7 @@ const Cart = () => {
               ))} */}
               <div className="tww2">
                 {/* <input type="text" placeholder="Enter Coupon" />{" "} */}
-                <button onClick={() => setShowTotal(!showTotal)}>
-                  {" "}
-                  {showTotal ? "Remove" : "Apply"}{" "}
-                </button>
+                <button onClick={() => setShowTotal(!showTotal)} > { showTotal ? "Remove" : "Apply"} </button>
               </div>
             </div>
           </div>

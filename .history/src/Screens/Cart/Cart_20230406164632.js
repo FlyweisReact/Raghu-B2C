@@ -82,7 +82,7 @@ const Cart = () => {
         {
           userId,
           cartId,
-          quantity: 1,
+          quantity: itemQuantity,
           actualPrice: actualPrice,
         }
       );
@@ -218,7 +218,7 @@ const Cart = () => {
                   fontWeight: "bold",
                 }}
               >
-                ${showTotal ? totalPrice : total}
+                {showTotal ? totalPrice : total}
               </p>
             </div>
             <div className="sub">
@@ -227,7 +227,7 @@ const Cart = () => {
                 Total Savings ({couponPercentage}%):{" "}
               </p>
               <p style={{ color: "#c2c2c2", textDecoration: " line-through" }}>
-                ${total - totalPrice}
+                {total - to}
               </p>
             </div>
             <button
