@@ -1,0 +1,12 @@
+Backend Changes
+
+Start Free Trial 
+// Already Registered Email in 404 err code
+// OTP is popping on the screen not to the mobile num, or to the mail ID (from backend , remove otp from frontend)
+// Says Successfull registered even it's an incorrect email (it will be changes after we give otp in email)
+
+//
+
+From Client 
+// Need Linkedin url
+// Need Youtube Url

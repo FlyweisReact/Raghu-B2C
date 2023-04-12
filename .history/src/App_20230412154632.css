@@ -1,0 +1,134 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+.hello{
+color:#7ABCFF;
+color:  #3284D6;
+color:  #D1E8FF;
+
+}
+/* ghfhgvcjhvjhvh */
+                  
+                    
+.BillingDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+.BillingDiv input {
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+  width: 300px;
+  padding: 10px;
+  outline: none;
+}
+.inputDIvv{
+  margin-top: 20px;
+}
+
+.BillingDiv .left {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 60%;
+  background-color: #f2f2f2;
+  text-align: center;
+  border: 2px solid #f2f2f2;
+}
+.BillingDiv .left .divSub {
+  display: flex;
+  justify-content: space-evenly;
+}
+.BillingDiv .left .up {
+  margin: 5%;
+}
+
+.BillingDiv .left .down {
+  margin: 5%;
+}
+.BillingDiv .left button {
+  background-color: #04a96d;
+  width: 100%;
+  margin-top: 1%;
+  padding: 5px;
+  font-size: 25px;
+  border: 1px solid #04a96d;
+  color: #fff;
+}
+
+.BillingDiv .right {
+  width: 20%;
+  background-color: #f2f2f2;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 250px;
+  text-align: center;
+}
+
+.BillingDiv .right h5 {
+  font-size: 2rem;
+  margin-top: 5%;
+  font-weight: bold;
+}
+
+.BillingDiv .right p {
+  color: blue;
+  text-align: left;
+  margin: 0;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+
+.BillingDiv .right h6 {
+  font-size: 1.6rem;
+  margin-top: 5%;
+}
+
+.ok-Image{
+  display: block;
+  margin: auto;
+}
+
+.twoBtns{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  gap : 20px
+}
+
+.twoBtns .btn2 {
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 5px;
+}
+.twoBtns .btn3 {
+  background-color: #358bf0;
+  border: 1px solid #358bf0;
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 5px;
+  color: white;
+  cursor: ;
+}
+
+
+@media (max-width : 768px) {
+  .BillingDiv{
+    display: block;
+  }
+  .BillingDiv .left {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .BillingDiv .left .divSub {
+    display: block;
+  }
+  .BillingDiv .right {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+  
+}

@@ -1,0 +1,68 @@
+// Raghu 
+
+Home Page
+
+//Start free trial
+1. No alert for the incorrect email - (formet is correct)
+2. No counry code the phn number (from library) ✅
+3. Need re- enter password and View password (from frontend)
+4. OTP is popping on the screen not to the mobile num, or to the mail ID (from backend , remove otp from frontend)
+5. Says Successfull registered even it's an incorrect email (it will be changes after we give otp in email)
+
+//Load more(our trending courses)	
+1. no directing to any page  (Where to direct)
+	
+//Get in touch
+1. No notification for the incorrect e- mail address (from backend )
+2. No country code for the phone Number (from frontend)
+
+//Social media link	
+1. Need to add Linkedin and Youtube accounts (Need url of Linkedin and Youtube)
+	
+//More(About us and Login)
+1. No forgot password (screen and backend implementation)
+
+Courses Page (without login)
+//Register Now		
+1. No notification for the incorrect e- mail address or Phn number and it got submitted 
+(has to add verification from backend and make one modal for otp verification)
+2. No country code for the phn Number (has to add library)
+3. No "X" to exit the pop Up(Where to add X)
+
+//All Courses  	
+1.Not showing the available courses (showing)
+2. we don't require "My courses" without login ( Has to remove from frontend )
+	
+//Buy Now	
+1. No notification to login, it's directing to buy now page where (From Frontend)
+a) Manage order- not working (From frontend)
+b) Check out- not working (Working)
+c) Need to alter Coupon code format ( need eplanation )
+
+//View all courses	
+1. No hyperlink is attached to Java is viewed % (what hyperlink)
+
+//Submit
+1. No notification fot the incorrect e- mail address or Phn number and it got submitted ( from backend)
+2. No country code for the phn Number (from frontend)
+3. No ""X"" to exit the pop Up (frontend)
+4. Even if we don't give any details, when we click on submit- it shows Successfully submitted (from frontend)
+
+
+//Resources Page
+//Read more	
+1.directing to article page, but there's no back button (from frontend)
+	
+//Get in touch	
+1.No notification fot the incorrect e- mail address (from backend)
+2. No country code for the phn Number (from frontend)
+
+//Courses Page (with login)			
+1. Do not require "Start- free trail" on the Home-page (from frontend)
+	
+Add to Cart
+1. a course shouldn't ne added more than once (from backend)
+2. Save for later is not working- we don't require this too (From Frontend)
+3. Quantity is not required (from frontend)
+4. Move to Wishlist is also not working (from frontend and backend)
+b) Manage order and continue Shopping is also not working (from  frontend)

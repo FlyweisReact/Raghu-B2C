@@ -1,0 +1,9 @@
+From Client 
+// Need Linkedin url
+// Need Youtube Url
+
+Cart
+//Need to alter Coupon code format ( need explanation )
+
+Course Page
+//No hyperlink is attached to Java is viewed % (what hyperlink)
