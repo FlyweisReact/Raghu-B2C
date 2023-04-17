@@ -1,0 +1,245 @@
+/** @format */
+
+import { useNavigate } from "react-router";
+import axios from "axios";
+import { Alert, Modal } from "react-bootstrap";
+import { useEffect, useState } from "react";
+
+function LoginModal(props) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [forget, setForget] = useState(false);
+  const [otpModal, setOtpModal] = useState(false);
+  const [defaultModal, setDefaultModal] = useState(true);
+  const [resetModal, setResetModal] = useState(false);
+  const [otp, setOtp] = useState("");
+  const [ userId , setUserId ] = useState("")
+  const [ confirmPassword , setConfirmPassword ] = useState("")
+  const [ forgotError , setForgotError ] = useState(false)
+
+  const loginUser = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post(
+        "https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/sign",
+        { email, password }
+      );
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("UserId", data.user._id);
+      props.onHide();
+      alert("Logged in Successfully");
+      navigate("/secondCourse");
+    } catch (err) {
+      alert(err.response.data.message);
+    }
+  };
+
+  const verifyEmail = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post(
+        "https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/forgetpassword",
+        { email }
+      );
+      alert(data?.message);
+      setDefaultModal(false);
+      setForget(false);
+      setOtpModal(true);
+    } catch (e) {
+      alert(e?.response?.data?.message);
+    }
+  };
+
+  const OtpVerify = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post(
+        "https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/verify",
+        { otp }
+      );
+      setUserId(data?.user?._id)
+      setDefaultModal(false);
+      setForget(false);
+      setOtpModal(false);
+      setResetModal(true);
+    } catch (e) {
+      console.log(e);
+      alert(e?.response?.data?.message);
+    }
+  };
+
+  const updatePassword = async (e) => {
+    e.preventDefault()
+    if(confirmPassword === password) {
+      try{
+        const { data } = await axios.put(`https://52pv9t2fl3.execute-api.ap-south-1.amazonaws.com/dev/api/v1/updatepassword/${userId}` , {password})
+        alert(data.message)
+        props.onHide()
+      }catch(e) { 
+        console.log(e)
+        
+      }
+    }else{
+      setForgotError(true)
+    }
+ 
+  }
+
+  useEffect(() => {
+    if (props.onHide) {
+      setDefaultModal(true);
+      setOtpModal(false);
+      setForget(false);
+      setResetModal(false);
+    }
+  }, [props.onHide]);
+
+  return (
+    <>
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Body style={{ padding: "0px" }}>
+          <div className="loginDiv">
+            <i className="fa-solid fa-x" onClick={() => props.onHide()}></i>
+          </div>
+          {defaultModal ? (
+            <>
+              <div className="loginDiv2">
+                <h1>Enter Your Details</h1>
+              </div>
+              <div className="loginDiv3">
+                <form onSubmit={loginUser}>
+                  <div className="mb-3  ">
+                    <p>Email Address</p>
+                    <input
+                      type="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <p>Password</p>
+                    <input
+                      type="password"
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <p
+                      style={{
+                        color: "blue",
+                        fontSize: "14px",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => {
+                        setDefaultModal(false);
+                        setForget(true);
+                      }}
+                    >
+                      Forgot Password !
+                    </p>
+                  </div>
+                  <button type="submit">Login</button>
+                </form>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+          {forget ? (
+            <>
+              <div className="loginDiv2">
+                <h1> Reset Password </h1>
+                <h6 style={{ textAlign: "center" }}>
+                  Enter Registered Email Address
+                </h6>
+              </div>
+              <div className="loginDiv3">
+                <form onSubmit={verifyEmail}>
+                  <div className="mb-3  ">
+                    <p>Email Address</p>
+                    <input
+                      type="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
+                  <button
+                    type="submit"
+      
+                  >
+                    Send
+                  </button>
+                </form>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+
+          {otpModal ? (
+            <>
+            {forgotError ?
+            
+              <Alert variant="danger">Passwords Do Not Match !</Alert>
+             :"" }
+              <div className="loginDiv2">
+                <h1>Enter OTP</h1>
+                <h6 style={{ textAlign: "center" }}>
+                  Enter Given OTP on registered email
+                </h6>
+              </div>
+              <div className="loginDiv3">
+                <form onSubmit={OtpVerify}>
+                  <div className="mb-3  ">
+                    <p>OTP</p>
+                    <input
+                      type="number"
+                      onChange={(e) => setOtp(e.target.value)}
+                    />
+                  </div>
+                  <button
+                    type="submit" >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+
+          {resetModal ? (
+            <>
+              <div className="loginDiv2">
+                <h1>Reset Password</h1>
+              </div>
+              <div className="loginDiv3">
+                <form onSubmit={updatePassword}>
+                  <div className="mb-3  ">
+                    <p>Password</p>
+                    <input type="password" onChange={(e) => setPassword(e.target.value)} />
+                  </div>
+                  <div className="mb-3  ">
+                    <p>Confirm Password</p>
+                    <input type="password" onChange={(e) => setConfirmPassword(e.target.value)} />
+                  </div>
+                  <button type="submit">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+
+          <div className="loginDiv4"></div>
+        </Modal.Body>
+      </Modal>
+    </>
+  );
+}
+
+export default LoginModal;
