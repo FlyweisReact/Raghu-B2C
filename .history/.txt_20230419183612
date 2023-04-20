@@ -1,0 +1,35 @@
+
+Start free trial	
+1. no aleart for the incorrect email- on the screen (there is an alert for incorrect email format , but we can't do anythings for non-existing email)
+2. OTp not receiving to the mobile number, only to the mail ID it's coming ( has to implement from backend )
+Load more(our trending courses)	 
+no directing to any page (where to redirect )
+	
+Register Now	
+2. It's submitting even if the date has crossed ( from frontend  )
+4. ""Submit"" button has to to be higlighted when give a click, and the fields have to be get cleared once a registration is submitted" ( from frontend )	
+All Courses  
+Beginner	FALSE	TRUE	
+Intermediate	FALSE	TRUE	
+Expert	FALSE	TRUE	
+All Courses			
+Buy Now	FALSE	TRUE	"a) Manage order- not working
+b) Check out- not working
+c) Need to alter Cupon code format"
+Add to Cart	TRUE	FALSE	
+View all courses	FALSE	TRUE	"It's directing to all courses pages
+a) Buy now- the same issues mentioned above
+b) add to cart- directing to a blank plage- "" no pop"" to log in or free trail page
+c) No hyperlink is attached to ""Java is
+viewed %"""
+Register Now			
+Select course drop down	FALSE	TRUE	available courses are not visible
+Select time slot	TRUE	FALSE	
+Submit	FALSE	FALSE	"1. No notification fot the incorrect e- mail address or Phn number and it got submitted
+
+2.if we don't give any details, when we click on submit- the fields have to highlightes saying ""requires informaton"""
+Social media links	FALSE	FALSE	
+Quick links	FALSE	TRUE	
+More			
+About us	TRUE	FALSE	
+Login	TRUE	FALSE	

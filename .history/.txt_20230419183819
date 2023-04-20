@@ -1,0 +1,26 @@
+
+Start free trial	
+1. no aleart for the incorrect email- on the screen (there is an alert for incorrect email format , but we can't do anythings for non-existing email)
+2. OTp not receiving to the mobile number, only to the mail ID it's coming ( has to implement from backend )
+Load more(our trending courses)	 
+no directing to any page (where to redirect )
+	
+Register Now	
+2. It's submitting even if the date has crossed ( from frontend  )
+4. ""Submit"" button has to to be higlighted when give a click, and the fields have to be get cleared once a registration is submitted" ( from frontend )	
+All Courses  
+Beginner , intermediate , expert	(filter from frontend)
+ Need to alter Cupon code format ( need explanation )
+  No hyperlink is attached to ""Java is  ( need explanation )
+
+Register Now			
+Select course drop down	FALSE	TRUE	available courses are not visible
+Select time slot	TRUE	FALSE	
+Submit	FALSE	FALSE	"1. No notification fot the incorrect e- mail address or Phn number and it got submitted
+
+2.if we don't give any details, when we click on submit- the fields have to highlightes saying ""requires informaton"""
+Social media links	FALSE	FALSE	
+Quick links	FALSE	TRUE	
+More			
+About us	TRUE	FALSE	
+Login	TRUE	FALSE	

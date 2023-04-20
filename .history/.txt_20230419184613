@@ -1,0 +1,56 @@
+
+Start free trial	
+1. no aleart for the incorrect email- on the screen (there is an alert for incorrect email format , but we can't do anythings for non-existing email)
+2. OTp not receiving to the mobile number, only to the mail ID it's coming ( has to implement from backend )
+Load more(our trending courses)	 
+no directing to any page (where to redirect )
+	
+Register Now	
+2. It's submitting even if the date has crossed ( from frontend  )
+4. ""Submit"" button has to to be higlighted when give a click, and the fields have to be get cleared once a registration is submitted" ( from frontend )	
+All Courses  
+Beginner , intermediate , expert	(filter from frontend)
+ Need to alter Cupon code format ( need explanation )
+  No hyperlink is attached to ""Java is viewed %"""  ( need explanation )
+if we don't give any details, when we click on submit- the fields have to highlightes saying ""requires informaton""" (from frontend)
+
+Search	
+	we can type, but it's not directing to the given field  ( )
+Wishlist	TRUE	FALSE	"1.do not require save for later
+2. price is not shown"
+ Cart	FALSE	FALSE	resolve as per previously mentioned
+User Account drop down			
+My account	FALSE	TRUE	"1. shows blank page
+2. need to add "" avatar ""
+3. user information has to be visibled"
+Wishlist	FALSE	TRUE	not directing
+Go to cart	FALSE	FALSE	resolve as previously mentioned
+My courses	FALSE	TRUE	not directing
+Sign out	TRUE	FALSE	
+Register Now	FALSE	FALSE	resolve as per previously mentioned
+Explore our Courses	FALSE	TRUE	not dircting to all courses
+My Courses	TRUE		
+My courses Drop down	TRUE		
+Beginner	FALSE	TRUE	
+Intermediate	FALSE	TRUE	
+Expert	FALSE	TRUE	
+My Courses(dropdown)			
+Play	TRUE	FALSE	No pop po"x" button to close the video
+All Courses(dropdown)			
+Buy Now	FALSE	FALSE	resolve as per previously mentioned
+Add to Cart	FALSE	FALSE	"1. a course shouldn't ne added more than once
+2. Save for later is not working- we don't require this too
+4. Move to Wishlist is also not working
+5. Promotions- coupon has to be manually entered
+6. Check out is not working properly
+a) without giving the payment detais also -shown subscription successful
+b) Manage order and continue Shopping is also not working
+7. No avatar is shown"
+Register Now			Resolve as per previously mentioned
+Select course drop down	FALSE	FALSE	
+Select time slot	FALSE	FALSE	
+Submit	FALSE	FALSE	
+Social media links	FALSE	FALSE	
+Quick links	FALSE	FALSE	
+More			
+About us	FALSE	FALSE	not directing to top
