@@ -1,0 +1,47 @@
+.wishlist{
+    width: 90%;
+    background-color: #ebebeb;
+    margin: auto;
+    margin-top: 2%;
+    padding: 60px;
+    margin-bottom: 5%;
+}
+.wishlist .head{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.wishlist button{
+    width: ;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #0085ff;
+    background-color: #0085ff;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.wishlist .wishlistCart{
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    gap: 50px;
+}
+.wishlist .wishlistCart img { 
+    width: 400px;
+}
+.wishlist .wishlistCart .CourseName{
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.wishlist .wishlistCart .removeDiv{
+    text-align: right;
+    color: red;
+    margin-top: 10px;
+}
+.wishlist .wishlistCart .removeDiv p{
+    margin-top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
